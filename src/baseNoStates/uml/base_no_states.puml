@@ -57,25 +57,30 @@ class Door {
 }
 
 abstract DoorState  {
-- {static} PORT :int
-- {static} FORMATTER : DateTimeFormatter
-+ Webserver()
+- Door door
+- String name
++ DoorState(Door : door)
+- {abstract} open()
+- {abstract} close()
+- {abstract} lock()
+- {abstract} unlock()
 }
 
 DoorState --> "*" Unlocked
 DoorState --> "*" Locked
 
 class Unlocked {
-- {static} PORT :int
-- {static} FORMATTER : DateTimeFormatter
-- {static} FORMATTER : DateTimeFormatter
-+ Webserver()
+- open()
+- close()
+- lock()
+- unlock()
 }
 
 class Locked {
-- {static} PORT :int
-- {static} FORMATTER : DateTimeFormatter
-+ Webserver()
+- open()
+- close()
+- lock()
+- unlock()
 }
 
 class User {
