@@ -7,6 +7,7 @@ import org.json.JSONObject;
 public class Door {
   private final String id;
   private boolean closed; // physically
+  private boolean locked;
 
   public Door(String id) {
     this.id = id;
@@ -60,6 +61,11 @@ public class Door {
   public boolean isClosed() {
     return closed;
   }
+  public void setClosed(boolean action) {  closed = action; }
+  public boolean isLocked() {
+    return locked;
+  }
+  public void setLocked(boolean action) {  locked = action; }
 
   public String getId() {
     return id;
