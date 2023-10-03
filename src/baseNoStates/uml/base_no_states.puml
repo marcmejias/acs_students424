@@ -56,6 +56,26 @@ class Door {
 - doAction(action : String)
 }
 
+abstract DoorState  {
+- {static} PORT :int
+- {static} FORMATTER : DateTimeFormatter
++ Webserver()
+}
+
+DoorState --> "*" Unlocked
+DoorState --> "*" Locked
+
+class Unlocked {
+- {static} PORT :int
+- {static} FORMATTER : DateTimeFormatter
++ Webserver()
+}
+
+class Locked {
+- {static} PORT :int
+- {static} FORMATTER : DateTimeFormatter
++ Webserver()
+}
 
 class User {
 - name : String
