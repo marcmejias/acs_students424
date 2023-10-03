@@ -67,14 +67,14 @@ DoorState --> "*" Locked
 
 class Unlocked {
 - {static} PORT :int
-- {static} FORMATTER : DateTimeFormatte
-- {static} FORMATTER : DateTimeFormatte
+- {static} FORMATTER : DateTimeFormatter
+- {static} FORMATTER : DateTimeFormatter
 + Webserver()
 }
 
 class Locked {
 - {static} PORT :int
-- {static} FORMATTER : DateTimeFormatte
+- {static} FORMATTER : DateTimeFormatter
 + Webserver()
 }
 
