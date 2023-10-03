@@ -29,25 +29,39 @@ public class Door {
   private void doAction(String action) {
     switch (action) {
       case Actions.OPEN:
-        if (closed) {
-          closed = false;
+        if (locked) {
+          DoorState state = new Locked();
+          state.open();
         } else {
-          System.out.println("Can't open door " + id + " because it's already open");
+          DoorState state = new Unlocked();
+          state.open();
         }
         break;
       case Actions.CLOSE:
-        if (closed) {
-          System.out.println("Can't close door " + id + " because it's already closed");
+        if (locked) {
+          DoorState state = new Locked();
+          state.close();
         } else {
-          closed = true;
+          DoorState state = new Unlocked();
+          state.close();
         }
         break;
       case Actions.LOCK:
-        // TODO
-        // fall through
+        if (locked) {
+          DoorState state = new Locked();
+          state.lock();
+        } else {
+          DoorState state = new Unlocked();
+          state.lock();
+        }
       case Actions.UNLOCK:
-        // TODO
-        // fall through
+        if (locked) {
+          DoorState state = new Locked();
+          state.unlock();
+        } else {
+          DoorState state = new Unlocked();
+          state.unlock();
+        }
       case Actions.UNLOCK_SHORTLY:
         // TODO
         System.out.println("Action " + action + " not implemented yet");
