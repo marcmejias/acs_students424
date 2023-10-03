@@ -74,7 +74,7 @@ class Unlocked {
 
 class Locked {
 - {static} PORT :int
-- {static} FORMATTER : DateTimeFormatter
+- {static} FORMATTER : DateTimeFormatte
 + Webserver()
 }
 
