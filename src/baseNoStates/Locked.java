@@ -1,6 +1,9 @@
 package baseNoStates;
 
 public class Locked extends DoorState{
+    public Locked (Door door) {
+        super(door);
+    }
     void open() {
         // fall through
         System.out.println("Can't open door " + name + " because it's locked");
@@ -14,7 +17,6 @@ public class Locked extends DoorState{
         System.out.println("Can't lock door " + name + " because it's locked");
     }
     void unlock(){
-        // fall through
-        door.setLocked(false);
+        door.setState(new Unlocked(door));
     }
 }

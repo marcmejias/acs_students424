@@ -4,7 +4,7 @@ public abstract class DoorState {
     protected Door door;
     protected String name;
 
-    void DoorState (Door door) {
+    public DoorState (Door door) {
         this.door = door;
         this.name = door.getId();
     }

@@ -1,17 +1,16 @@
 package baseNoStates;
-
 import baseNoStates.requests.RequestReader;
 import org.json.JSONObject;
-
 
 public class Door {
   private final String id;
   private boolean closed; // physically
-  private boolean locked;
+  private DoorState state;
 
   public Door(String id) {
     this.id = id;
     closed = true;
+    state = new Unlocked(this);
   }
 
   public void processRequest(RequestReader request) {
@@ -29,39 +28,17 @@ public class Door {
   private void doAction(String action) {
     switch (action) {
       case Actions.OPEN:
-        if (locked) {
-          DoorState state = new Locked();
-          state.open();
-        } else {
-          DoorState state = new Unlocked();
-          state.open();
-        }
+        state.open();
         break;
       case Actions.CLOSE:
-        if (locked) {
-          DoorState state = new Locked();
-          state.close();
-        } else {
-          DoorState state = new Unlocked();
-          state.close();
-        }
+        state.close();
         break;
       case Actions.LOCK:
-        if (locked) {
-          DoorState state = new Locked();
-          state.lock();
-        } else {
-          DoorState state = new Unlocked();
-          state.lock();
-        }
+        state.lock();
+        break;
       case Actions.UNLOCK:
-        if (locked) {
-          DoorState state = new Locked();
-          state.unlock();
-        } else {
-          DoorState state = new Unlocked();
-          state.unlock();
-        }
+        state.unlock();
+        break;
       case Actions.UNLOCK_SHORTLY:
         // TODO
         System.out.println("Action " + action + " not implemented yet");
@@ -76,11 +53,9 @@ public class Door {
     return closed;
   }
   public void setClosed(boolean action) {  closed = action; }
-  public boolean isLocked() {
-    return locked;
+  public void setState(DoorState state) {
+    this.state = state;
   }
-  public void setLocked(boolean action) {  locked = action; }
-
   public String getId() {
     return id;
   }
