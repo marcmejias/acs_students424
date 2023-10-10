@@ -12,13 +12,20 @@ public abstract class Area {
         this.doors = doors;
     }
 
-    public Door[] getDoorsGivingAccess() {
+    public ArrayList<Door> getDoorsGivingAccess() {
         return null;
     }
     public static Area findAreaById(String id){
         return rootArea.findAreaById(id); // an Area or null if not found
     }
-    public Space[] getSpaces() {
-        return null;
+    public String getId() {return id;}
+    public ArrayList<Space> getSpaces() {
+        ArrayList<Space> spaces = null;
+        for (Area space : area){
+            if(space.rootArea.getId() == id){
+                spaces.add(space);
+            }
+        }
+        return spaces;
     }
 }
