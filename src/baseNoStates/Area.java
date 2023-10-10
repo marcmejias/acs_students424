@@ -6,6 +6,7 @@ public abstract class Area {
     protected final String id;
     protected static Area rootArea;
     protected ArrayList<Door> doors;
+    //protected ArrayLists<Area> children;
     public Area (String id, Area root, ArrayList<Door> doors){
         this.id = id;
         rootArea = root;
