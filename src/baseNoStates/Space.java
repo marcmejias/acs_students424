@@ -1,9 +1,7 @@
 package baseNoStates;
 
-public class Space {
-  private final String door;
-
-  public Space(String door) {
-    this.door = door;
+public class Space extends Area{
+  public Space(String id, Area root) {
+    super(id, root);
   }
 }
