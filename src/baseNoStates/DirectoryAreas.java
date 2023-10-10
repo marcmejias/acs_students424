@@ -8,6 +8,7 @@ public final class DirectoryAreas {
     private static Area rootArea;
 
     public static void makeAreas(){
+        allDoors = DirectoryDoors.getAllDoors();
         //root
         Partition building = new Partition("building", null, null);
         rootArea = building;
