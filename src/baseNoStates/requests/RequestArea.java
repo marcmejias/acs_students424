@@ -1,6 +1,9 @@
 package baseNoStates.requests;
 
 import baseNoStates.Actions;
+import baseNoStates.Area;
+import baseNoStates.DirectoryAreas;
+import baseNoStates.Door;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -60,15 +63,12 @@ public class RequestArea implements Request {
             + "}";
   }
 
-  // processing the request of an area is creating the corresponding door requests and forwarding
-  // them to all of its doors. For some it may be authorized and action will be done, for others
-  // it won't be authorized and nothing will happen to them.
-  public void process() {
-    // commented out until Area, Space and Partition are implemented
 
-    /*
-    // make the door requests and put them into the area request to be authorized later and
-    // processed later
+  public void process() {
+    // processing the request of an area is creating the corresponding door requests and forwarding
+    // them to all of its doors. For some it may be authorized and action will be done, for others
+    // it won't be authorized and nothing will happen to them.
+    // make the door requests and put them into the area request to be authorized later and processed later
     Area area = DirectoryAreas.findAreaById(areaId);
     // an Area is a Space or a Partition
     if (area != null) {
@@ -85,6 +85,5 @@ public class RequestArea implements Request {
         requests.add(requestReader);
       }
     }
-     */
   }
 }
