@@ -1,7 +1,9 @@
 package baseNoStates;
 
-public class Space extends Area{
-  public Space(String id, Area root) {
-    super(id, root);
+import java.util.ArrayList;
+
+public class Space extends Area {
+  public Space(String id, Area root, ArrayList<Door> doors) {
+    super(id, root, doors);
   }
 }
