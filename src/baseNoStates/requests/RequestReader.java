@@ -1,6 +1,5 @@
 package baseNoStates.requests;
 
-import baseNoStates.DirectoryDoors;
 import baseNoStates.DirectoryUsers;
 import baseNoStates.Door;
 import baseNoStates.User;
