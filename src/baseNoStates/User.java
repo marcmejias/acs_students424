@@ -1,9 +1,13 @@
 package baseNoStates;
 
+import java.util.Objects;
+
 public class User  {
   //extends UserGroup
   private final String name;
   private final String credential;
+
+  // Añadir userGroup ???
 
   public User(String name, String credential) {
     this.name = name;
@@ -13,13 +17,14 @@ public class User  {
   public String getCredential() {
     return credential;
   }
-  public boolean canSendRequests(){
+  public boolean canSendRequests() {
     return true;
   }
-  public boolean canBeInSpace(Space space){
+  public boolean canBeInSpace(Space space) {
     return true;
   }
-  public boolean canDoAction(Actions action){
+  public boolean canDoAction(String action) {
+
     return true;
   }
   @Override

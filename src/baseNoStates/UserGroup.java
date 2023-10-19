@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class UserGroup {
     private final String name;
     private final ArrayList<User> users;
-    private Actions actions;
-    private ArrayList<Area> permission;
+    private ArrayList<String> actions;
+    private ArrayList<String> prohibitedSpaces; // Igual son areas en vez de espacios
     private Schedule schedule;
-    public UserGroup(String name, ArrayList<User> users, Actions actions, ArrayList<Area> permission, Schedule schedule) {
+    public UserGroup(String name, ArrayList<User> users, ArrayList<String> actions, ArrayList<String> prohibitedSpaces, Schedule schedule) {
         this.name = name;
         this.users = users;
-        this.permission = permission;
+        this.prohibitedSpaces = prohibitedSpaces;
         this.actions = actions;
         this.schedule = schedule;
     }

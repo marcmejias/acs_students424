@@ -1,5 +1,6 @@
 package baseNoStates;
 
+// A Door in the Locked state can be unlocked or unlocked_shortly
 public class Locked extends DoorState{
     public Locked (Door door) {
         super(door);
