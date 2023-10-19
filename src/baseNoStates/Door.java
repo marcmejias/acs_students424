@@ -6,6 +6,8 @@ public class Door {
   private final String id;
   private boolean closed; // physically
   private DoorState state;
+  private Space from;
+  private Space to;
 
   public Door(String id) {
     this.id = id;
@@ -59,9 +61,20 @@ public class Door {
   public String getId() {
     return id;
   }
-
   public String getStateName() {
     return "unlocked";
+  }
+  public void setFromSpace(Space from) {
+    this.from = from;
+  }
+  public void setToSpace(Space to) {
+    this.to = to;
+  }
+  public Space getFromSpace(){
+    return from;
+  }
+  public Space getToSpace(){
+    return to;
   }
 
   @Override

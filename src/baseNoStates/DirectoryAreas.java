@@ -12,6 +12,10 @@ public final class DirectoryAreas {
         Partition building = new Partition("building", null, null);
         rootArea = building;
 
+        //independent
+        Space stairs = new Space("stairs", building, null);
+        Space exterior = new Space("exterior", building, null);
+
         //partitions
         ArrayList<Door> base = new ArrayList<>(Arrays.asList(allDoors.get(0), allDoors.get(1)));
         Partition basement = new Partition("basement", building, base);
@@ -23,26 +27,40 @@ public final class DirectoryAreas {
         // basement
         ArrayList<Door> park = new ArrayList<>(Arrays.asList(allDoors.get(0), allDoors.get(1)));
         Space parking = new Space("parking", basement, park);
+        allDoors.get(0).setFromSpace(null);
+        allDoors.get(0).setToSpace(parking);
+        allDoors.get(1).setFromSpace(stairs);
+        allDoors.get(1).setToSpace(parking);
 
         // ground floor
         ArrayList<Door> hal = new ArrayList<>(Arrays.asList(allDoors.get(2), allDoors.get(3)));
         Space hall = new Space("hall", ground_floor, hal);
+        allDoors.get(2).setFromSpace(exterior);
+        allDoors.get(2).setToSpace(hall);
+        allDoors.get(3).setFromSpace(stairs);
+        allDoors.get(3).setToSpace(hall);
         ArrayList<Door> room1 = new ArrayList<>(Arrays.asList(allDoors.get(4)));
         Space room_1 = new Space("room 1", ground_floor, room1);
+        allDoors.get(4).setFromSpace(hall);
+        allDoors.get(4).setToSpace(room_1);
         ArrayList<Door> room2 = new ArrayList<>(Arrays.asList(allDoors.get(5)));
         Space room_2 = new Space("room 2", ground_floor, room2);
+        allDoors.get(5).setFromSpace(hall);
+        allDoors.get(5).setToSpace(room_2);
 
         // first floor
-        ArrayList<Door> room3 = new ArrayList<>(Arrays.asList(allDoors.get(7)));
-        Space room_3 = new Space("room 3", floor_1, room3);
         ArrayList<Door> cor = new ArrayList<>(Arrays.asList(allDoors.get(6)));
         Space corridor = new Space("corridor", floor_1, cor);
+        allDoors.get(6).setFromSpace(stairs);
+        allDoors.get(6).setToSpace(corridor);
+        ArrayList<Door> room3 = new ArrayList<>(Arrays.asList(allDoors.get(7)));
+        Space room_3 = new Space("room 3", floor_1, room3);
+        allDoors.get(7).setFromSpace(corridor);
+        allDoors.get(7).setToSpace(room_3);
         ArrayList<Door> it = new ArrayList<>(Arrays.asList(allDoors.get(8)));
         Space IT = new Space("IT", floor_1, it);
-
-        //independent
-        Space stairs = new Space("stairs", building, null);
-        Space exterior = new Space("exterior", building, null);
+        allDoors.get(8).setFromSpace(corridor);
+        allDoors.get(8).setToSpace(IT);
     }
     public static Area findAreaById(String id){
         return rootArea.findAreaById(id); // an Area or null if not found
@@ -57,8 +75,8 @@ public final class DirectoryAreas {
         return null; // otherwise we get a Java error
     }
 
-    public static void setAllDoors(ArrayList<Door> allDoors) {
-        DirectoryAreas.allDoors = allDoors;
+    public ArrayList<Door> getAllDoors() {
+        return allDoors;
     }
 
 
