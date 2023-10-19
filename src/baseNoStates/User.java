@@ -1,6 +1,6 @@
 package baseNoStates;
 
-public class User {
+public class User extends UserGroup {
   private final String name;
   private final String credential;
 
