@@ -1,6 +1,5 @@
 package baseNoStates.requests;
 
-import baseNoStates.DirectoryDoors;
 import baseNoStates.Door;
 import java.util.ArrayList;
 import org.json.JSONArray;
