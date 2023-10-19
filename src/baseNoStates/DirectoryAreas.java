@@ -56,7 +56,10 @@ public final class DirectoryAreas {
         System.out.println("door with id " + id + " not found");
         return null; // otherwise we get a Java error
     }
-    public ArrayList<Door> getAllDoors(){
-        return allDoors;
+
+    public static void setAllDoors(ArrayList<Door> allDoors) {
+        DirectoryAreas.allDoors = allDoors;
     }
+
+
 }
