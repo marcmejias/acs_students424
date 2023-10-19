@@ -1,6 +1,7 @@
 package baseNoStates;
 
-public class User extends UserGroup {
+public class User  {
+  //extends UserGroup
   private final String name;
   private final String credential;
 
@@ -12,7 +13,15 @@ public class User extends UserGroup {
   public String getCredential() {
     return credential;
   }
-
+  public boolean canSendRequests(){
+    return true;
+  }
+  public boolean canBeInSpace(Space space){
+    return true;
+  }
+  public boolean canDoAction(Actions action){
+    return true;
+  }
   @Override
   public String toString() {
     return "User{name=" + name + ", credential=" + credential + "}";

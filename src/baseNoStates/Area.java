@@ -28,9 +28,9 @@ public abstract class Area {
     }
     public ArrayList<Space> getSpaces() {
         ArrayList<Space> spaces = null;
-        for (Area space : area){
+        for (Area space : children){
             if(space.rootArea.getId() == id){
-                spaces.add(space);
+                spaces.add((Space) space);
             }
         }
         return spaces;
