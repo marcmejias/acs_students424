@@ -1,5 +1,6 @@
 package baseNoStates;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Schedule {
@@ -12,5 +13,10 @@ public class Schedule {
     this.dateInterval = dateInterval;
     this.weekdays = weekdays;
     this.timeInterval = timeInterval;
+  }
+
+  // TODO implementar lógica para comprobar horario
+  public boolean isInSchedule(LocalDateTime now){
+    return true;
   }
 }

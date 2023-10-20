@@ -95,20 +95,14 @@ public class RequestReader implements Request {
       authorized = false;
       addReason("user doesn't exists");
     } else {
-      /*
+
       //TODO: get the who, where, when and what in order to decide, and if not authorized add the reason(s)
 
       //who
-      authorized = true;
-      //authorized = user
-      // when : date, time and weekday
-      canSendRequests(now)
-      // where
-      && user.canBeInSpace(door.getFromSpace())
-      && user.canBeInSpace(door.getToSpace())
-              // what
-      && user.canDoAction(action);
-      */
+      // authorized = true;
+      // canSendRequests(now)
+      authorized = user.canSendRequests(now) && user.canBeInSpace(door.getFromSpace())
+          && user.canBeInSpace(door.getToSpace()) && user.canDoAction(action);
     }
   }
 }

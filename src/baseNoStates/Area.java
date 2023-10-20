@@ -16,6 +16,7 @@ public abstract class Area {
         }
     }
 
+    // TODO implementar para fita 2
     public ArrayList<Door> getDoorsGivingAccess() {
         return null;
     }

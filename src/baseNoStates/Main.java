@@ -12,8 +12,8 @@ public class Main {
   }
   public static void main(String[] args) {
     DirectoryAreas.makeDoors();
-    DirectoryUserGroups.makeUserGroup();
     DirectoryAreas.makeAreas();
+    DirectoryUserGroups.makeUserGroup();
     new WebServer();
     final int period = 2; // seconds
     Clock clock = new Clock(period);

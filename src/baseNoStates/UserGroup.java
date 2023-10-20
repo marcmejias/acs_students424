@@ -6,17 +6,25 @@ public class UserGroup {
     private final String name;
     private final ArrayList<User> users;
     private ArrayList<String> actions;
-    private ArrayList<String> prohibitedSpaces; // Igual son areas en vez de espacios
+    private ArrayList<Space> permittedSpaces;
     private Schedule schedule;
-    public UserGroup(String name, ArrayList<User> users, ArrayList<String> actions, ArrayList<String> prohibitedSpaces, Schedule schedule) {
+    public UserGroup(String name, ArrayList<User> users, ArrayList<String> actions, ArrayList<Space> permittedSpaces, Schedule schedule) {
         this.name = name;
         this.users = users;
-        this.prohibitedSpaces = prohibitedSpaces;
+        this.permittedSpaces = permittedSpaces;
         this.actions = actions;
         this.schedule = schedule;
+
+        for (User user : this.users){
+            user.setGroup(this);
+        }
     }
 
+    public String getName(){ return name; }
     public ArrayList<User> getUsers(){
         return users;
     }
+    public ArrayList<String> getActions(){ return actions; }
+    public ArrayList<Space> getPermittedSpace(){ return permittedSpaces; }
+    public Schedule getSchedule(){ return schedule; }
 }

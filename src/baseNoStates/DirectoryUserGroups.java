@@ -16,12 +16,15 @@ public class DirectoryUserGroups {
     temporal.add(new User("Bernat", "12345"));
     temporal.add(new User("Blai", "77532"));
 
-    // Prohibited Spaces
-    ArrayList<String> temporalProhibitedSpaces = new ArrayList<>(Arrays.asList("stairs", "exterior", "parking", "hall",
+    // TODO Cambiar de espacios prohibidos a espacio en los que puede estar
+    // Spaces
+
+    // "stairs", "exterior", "parking", "hall","room 1", "room 2", "corridor", "room 3", "IT"
+    ArrayList<Space> temporalPermittedSpaces = new ArrayList<>(Arrays.asList("stairs", "exterior", "parking", "hall",
         "room 1", "room 2", "corridor", "room 3", "IT"));
 
     // Group
-    UserGroup temporals = new UserGroup("temporals", temporal, null, temporalProhibitedSpaces, null);
+    UserGroup temporals = new UserGroup("temporals", temporal, null, temporalPermittedSpaces, null);
     userGroups.add(temporals);
 
     // employees :
@@ -91,6 +94,9 @@ public class DirectoryUserGroups {
     // Actions
     ArrayList<String> actionsAdmin = new ArrayList<String>(Arrays.asList(Actions.OPEN, Actions.CLOSE,
         Actions.LOCK, Actions.UNLOCK, Actions.UNLOCK_SHORTLY));
+
+    // Spaces
+
 
     // Schedule
     ArrayList<String> adminDates = new ArrayList<String>(Arrays.asList("2023-01-01", "2100-01-01"));
