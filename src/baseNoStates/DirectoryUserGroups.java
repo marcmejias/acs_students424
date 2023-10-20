@@ -17,6 +17,7 @@ public class DirectoryUserGroups {
     temporal.add(new User("Blai", "77532"));
 
     // TODO Cambiar de espacios prohibidos a espacio en los que puede estar
+    // TODO Use find area by id
     // Spaces
 
     // "stairs", "exterior", "parking", "hall","room 1", "room 2", "corridor", "room 3", "IT"
