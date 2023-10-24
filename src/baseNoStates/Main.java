@@ -22,5 +22,21 @@ public class Main {
     // wait for 11 seconds while the clock runs
     // but you can do other things here instead
     clock.stop();
+
+    //TEST D
+    //Print de door locked, unlocked
+
+    //TEST C
+    //Print de spaces, partitions
+    //Print del arbol de Areas mejor
+    //ejecutar readerRequest/areaRequest el authorize para comporbar que funciona
+
+    //TEST B
+    //print de las variables de un user group
+    //print de todos los nombres de user group
+    //ejecutar isInSchedule para mostrar que funciona (en verdad es repetir el authorize())
+
+    //TEST A
+    //no se ha implementado, pero seria hacer print de door en unlock_shortly
   }
 }
