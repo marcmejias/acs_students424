@@ -25,22 +25,28 @@ inner class
 of Webserver
 end note
 
-class DirectoryDoors {
+class DirectoryAreas {
+- {static} rootArea : Area
 - {static} allDoors : Door[]
-+ {static} makeDoors()
++ {static} makeAreas()
++ {static} findAreaById(id : String) : Area
 + {static} findDoorById(id : String) : Door
 + {static} getAllDoors() : Door[]
 }
 
-DirectoryDoors --> "*" Door : "allDoors"
+DirectoryAreas --> "*" Door : "allDoors"
+DirectoryAreas --> "1" Area : "rootArea"
 
-class DirectoryUsers {
+class DirectoryUsersGroup {
 - {static} users : User[]
-+ {static} makeUsers()
++ {static} makeUserGroups()
 + {static} findUserByCredential(credential : String) : User
 }
 
-DirectoryUsers --> "*" User : "users"
+Door --> "1" DoorStates : "state"
+DirectoryUsersGroup o--> "1..*" UserGroup : "userGroup"
+UserGroup --> "*" Area : "areas"
+UserGroup *--> "*" User : "users"
 
 class Door {
 - id : String
@@ -56,33 +62,48 @@ class Door {
 - doAction(action : String)
 }
 
-abstract DoorState  {
-- Door door
-- String name
-+ DoorState(Door : door)
+package DoorStates{
+abstract DoorState{
+#door : Door
+#name : String
++ DoorState(door : Door)
 - {abstract} open()
 - {abstract} close()
 - {abstract} lock()
 - {abstract} unlock()
 }
 
-DoorState --> "*" Unlocked
-DoorState --> "*" Locked
+DoorState <|-- Unlocked
+DoorState <|-- Locked
 
 class Unlocked {
-- open()
-- close()
-- lock()
-- unlock()
++ DoorState(door : Door)
++ open()
++ close()
++ lock()
++ unlock()
 }
 
 class Locked {
-- open()
-- close()
-- lock()
-- unlock()
++ DoorState(door : Door)
++ open()
++ close()
++ lock()
++ unlock()
+}
+class States{
+{static}+LOCKED : String
+{static}+UNLOCKED : String
 }
 
+class Actions{
+{static}+LOCK : String
+{static}+UNLOCK : String
+{static}+OPEN : String
+{static}+CLOSE : String
+}
+
+}
 class User {
 - name : String
 - credential : String
@@ -90,6 +111,65 @@ class User {
 + toString() : String
 }
 
+
+
+abstract Area{
+-id :String
+-{static}rootArea :Area
+-doors : ArrayList<Door>
+-children : ArrayList<Area>
++getId()
++addChild()
++{abstract}getDoorsGivingAccess() : Door[]
++{abstract}findAreaById(id : String) : Area
++{abstract}getSpaces() : Space[]
+}
+
+class Clock{
+-date : LocalDateTime
+-timer : Timer
+-period : int
++Clock (period : int)
++start()
++stop()
++getPeriod()
++getDate (date : LocalDateTime)
++Clock(period : int)
+}
+
+Area --> "*" Partition
+Area --> "*" Space
+class Partition{
++Partition(id : String, root : Area, doors : ArrayList<Door>)
+}
+
+class Space{
++Space(id : String, root : Area, doors : ArrayList<Door>
+}
+class Schedule{
+-dateInterval : ArrayList<String>
+-weekdays : ArrayList<String>
+-timeInterval : ArrayList<String>
++Schedule(dateInterval : ArrayList<String>,weekdays : ArrayList<String>,
+timeInterval : ArrayList<String>)
+}
+
+
+
+class UserGroup{
+-name : String
+-users : ArrayList<User>
+-actions : ArrayList<String>
+-permittedSpaces : ArrayList<Space>
+-schedule : Schedule
++getName()
++getUsers()
++getActions()
++getPermittedSpace()
++getSchedule()
++UserGroup(name : String, users : ArrayList<User>, actions : ArrayList<String>,
+permittedSpaces : ArrayList<String>, schedule : Schedule)
+}
 
 class Main {
 + {static} main(args : String)
@@ -102,6 +182,5 @@ new Webserver()
 end note
 
 Main -[hidden]down- Webserver
-Webserver -[hidden]down- DirectoryDoors
-DirectoryDoors -[hidden]right- DirectoryUsers
+
 @enduml
