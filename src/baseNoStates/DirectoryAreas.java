@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public final class DirectoryAreas {
     private static ArrayList<Door> allDoors;
-    private static Area rootArea;
+    public static Area rootArea;
 
     public static void makeAreas(){
         //root
@@ -96,6 +96,4 @@ public final class DirectoryAreas {
     public static ArrayList<Door> getAllDoors() {
         return allDoors;
     }
-
-
 }

@@ -21,12 +21,16 @@ public class DirectoryUserGroups {
     // Spaces
 
     // "stairs", "exterior", "parking", "hall","room 1", "room 2", "corridor", "room 3", "IT"
-    ArrayList<Space> temporalPermittedSpaces = new ArrayList<>(Arrays.asList("stairs", "exterior", "parking", "hall",
-        "room 1", "room 2", "corridor", "room 3", "IT"));
+    ArrayList<String> temporalPermittedSpaces = null;
+    // new ArrayList<>(Arrays.asList("stairs", "exterior", "parking", "hall", "room 1", "room 2", "corridor", "room 3", "IT"));
+
+    // Actions
+    ArrayList<String> actionsTemporal = new ArrayList<>();
 
     // Group
-    UserGroup temporals = new UserGroup("temporals", temporal, null, temporalPermittedSpaces, null);
+    UserGroup temporals = new UserGroup("temporals", temporal, actionsTemporal, temporalPermittedSpaces, null);
     userGroups.add(temporals);
+    //temporals have no schedule whatsoever, leave at null
 
     // employees :
     // Sep. 1 2023 to Mar. 1 2024
@@ -44,8 +48,8 @@ public class DirectoryUserGroups {
     actionsEmployee.add(Actions.UNLOCK_SHORTLY);
 
     // Prohibited Spaces
-    ArrayList<String> employeeProhibitedSpaces = new ArrayList<>();
-    employeeProhibitedSpaces.add("parking");
+    ArrayList<String> employeePermittedSpaces = new ArrayList<>();
+    employeePermittedSpaces.add("parking");
 
     // Schedule
     ArrayList<String> employeeDates = new ArrayList<String>(Arrays.asList("2023-09-01", "2024-03-01"));
@@ -54,8 +58,7 @@ public class DirectoryUserGroups {
     Schedule employeeSchedule = new Schedule(employeeDates, employeeDays, employeeHours);
 
     // Group
-    UserGroup employees = new UserGroup("employees", employee, actionsEmployee,
-        employeeProhibitedSpaces, employeeSchedule);
+    UserGroup employees = new UserGroup("employees", employee, actionsEmployee, employeePermittedSpaces, employeeSchedule);
     userGroups.add(employees);
 
     // managers :

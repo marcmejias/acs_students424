@@ -1,6 +1,7 @@
 package baseNoStates;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class User  {
@@ -43,7 +44,9 @@ public class User  {
     }
     return false;
   }
-  public Space getSpaces(){return spaces}
+  public ArrayList<Space> getSpaces(){
+    return group.getPermittedSpace();
+  }
   @Override
   public String toString() {
     return "User{name=" + name + ", credential=" + credential + "}";

@@ -20,8 +20,16 @@ public abstract class Area {
     public ArrayList<Door> getDoorsGivingAccess() {
         return null;
     }
-    public static Area findAreaById(String id){
-        return rootArea.findAreaById(id); // an Area or null if not found
+    public Area findAreaById(String id){
+        if (this.id == id){
+            return this;
+        } else {
+            for (Area area : children){
+                return area.findAreaById(id);
+            }
+
+        }
+        return null;
     }
     public String getId() {return id;}
     public void addChild(Area child) {
