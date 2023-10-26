@@ -8,7 +8,10 @@ public class Space extends Area {
   }
   @Override
   public Space findAreaById(String id){
-    return this;
+    if (this.id == id) {
+      return this;
+    }
+    return null;
   }
   public ArrayList<Space> getSpaces() {
     return null;

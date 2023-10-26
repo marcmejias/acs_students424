@@ -34,8 +34,7 @@ public class DirectoryUserGroups {
     employee.add(new User("Ernest", "74984"));
     employee.add(new User("Eulalia", "43295"));
     // Actions
-    ArrayList<String> actionsEmployee = new ArrayList<>();
-    actionsEmployee.add(Actions.UNLOCK_SHORTLY);
+    ArrayList<String> actionsEmployee = new ArrayList<String>(Arrays.asList(Actions.OPEN, Actions.CLOSE));
     // Spaces
     ArrayList<String> employeePermittedSpaces =
             new ArrayList<>(Arrays.asList("stairs", "exterior", "hall", "room 1", "room 2", "corridor", "room 3", "IT"));

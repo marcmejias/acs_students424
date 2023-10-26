@@ -62,7 +62,7 @@ public class Door {
     return id;
   }
   public String getStateName() {
-    return "unlocked";
+    return state.getName();
   }
   public void setFromSpace(Space from) {
     this.from = from;

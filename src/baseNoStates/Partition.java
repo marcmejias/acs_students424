@@ -15,14 +15,11 @@ public final class Partition extends Area{
     public Area findAreaById(String id){
         if (this.id == id) {
             return this;
-        } else {
-            for (Area area : children){
-                if (area.getId() == id){
-                    return (Space) area;
-                }
-                else if (area.getClass() == this.getClass()) {
-                    area.findAreaById(id);
-                }
+        }
+        for (Area area : children) {
+            Area res = area.findAreaById(id);
+            if (res != null) {
+                return res;
             }
         }
         return null;

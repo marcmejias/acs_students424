@@ -6,7 +6,11 @@ public abstract class DoorState {
 
     public DoorState (Door door) {
         this.door = door;
-        this.name = door.getId();
+        //this.name = this.;
+    }
+
+    public String getName() {
+        return name;
     }
 
     abstract void open();

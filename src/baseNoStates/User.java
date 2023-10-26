@@ -38,7 +38,7 @@ public class User  {
   }
   public boolean canDoAction(String action) {
     for (String actions: group.getActions()) {
-      if (actions == action){
+      if (actions.equals(action)){
         return true;
       }
     }
