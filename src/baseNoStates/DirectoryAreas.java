@@ -13,8 +13,10 @@ public final class DirectoryAreas {
         rootArea = building;
 
         //independent
-        Space stairs = new Space("stairs", building, null);
-        Space exterior = new Space("exterior", building, null);
+        ArrayList<Door> stair = new ArrayList<>(Arrays.asList(allDoors.get(1), allDoors.get(3), allDoors.get(6)));
+        Space stairs = new Space("stairs", building, stair);
+        ArrayList<Door> ext = new ArrayList<>(Arrays.asList(allDoors.get(0), allDoors.get(2)));
+        Space exterior = new Space("exterior", building, ext);
 
         //partitions
         ArrayList<Door> base = new ArrayList<>(Arrays.asList(allDoors.get(0), allDoors.get(1)));

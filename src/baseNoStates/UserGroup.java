@@ -7,16 +7,16 @@ public class UserGroup {
     private final String name;
     private final ArrayList<User> users;
     private ArrayList<String> actions;
-    private ArrayList<Space> permittedSpaces;
+    private ArrayList<Space> permittedSpaces = new ArrayList<>();
     private Schedule schedule;
     public UserGroup(String name, ArrayList<User> users, ArrayList<String> actions, ArrayList<String> permittedSpaces, Schedule schedule) {
         this.name = name;
         this.users = users;
-        ArrayList<Space> spaces = new ArrayList<>();
-        for (String space : permittedSpaces) {
-            spaces.add((Space)rootArea.findAreaById(space));
+        if (permittedSpaces != null) {
+            for (String space : permittedSpaces) {
+                this.permittedSpaces.add((Space) findAreaById(space));
+            }
         }
-        this.permittedSpaces = spaces;
         this.actions = actions;
         this.schedule = schedule;
         for (User user : this.users){
@@ -31,4 +31,7 @@ public class UserGroup {
     public ArrayList<String> getActions(){ return actions; }
     public ArrayList<Space> getPermittedSpace(){ return permittedSpaces; }
     public Schedule getSchedule(){ return schedule; }
+    public Area findAreaById(String id){
+        return rootArea.findAreaById(id);
+    }
 }

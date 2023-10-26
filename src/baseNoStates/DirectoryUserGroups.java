@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DirectoryUserGroups {
-  private static ArrayList<UserGroup> userGroups;
+  private static ArrayList<UserGroup> userGroups = new ArrayList<>();
 
   public static void makeUserGroup(){
     // users without any privilege, just to keep temporally users instead of deleting them,
