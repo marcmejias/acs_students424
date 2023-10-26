@@ -29,7 +29,7 @@ public class User  {
     return false;
   }
   public boolean canBeInSpace(Space space) {
-    for (Space spaces: group.getPermittedSpace()) {
+    for (Space spaces: getSpaces()) {
       if(spaces == space){
         return true;
       }
@@ -38,7 +38,7 @@ public class User  {
   }
   public boolean canDoAction(String action) {
     for (String actions: group.getActions()) {
-      if( actions == action){
+      if (actions == action){
         return true;
       }
     }

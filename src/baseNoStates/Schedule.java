@@ -1,41 +1,43 @@
 package baseNoStates;
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Schedule {
   //when : date interval + weekdays + time interval in a day = Schedule
-  private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-  private final LocalDateTime fromDate;
-  private final LocalDateTime toDate;
+  //private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+  private final LocalDate fromDate;
+  private final LocalDate toDate;
   private final ArrayList<String> weekdays;
-  private final String fromHour;
-  private final String toHour;
+  private final LocalTime fromHour;
+  private final LocalTime toHour;
 
   public Schedule(ArrayList<String> dateInterval, ArrayList<String> weekdays, ArrayList<String> timeInterval) {
-    //We need to add a random hour so LocalDateTime can parse the date
-    this.fromDate = LocalDateTime.parse(dateInterval.get(0) + " 00:00" , formatter); //example of parse content: "2024-03-01"
-    this.toDate = LocalDateTime.parse(dateInterval.get(1)  + " 00:00" , formatter);
+    this.fromDate = LocalDate.parse(dateInterval.get(0)); //example of parse content: "2024-03-01"
+    this.toDate = LocalDate.parse(dateInterval.get(1));
 
-    this.fromHour = timeInterval.get(0);
-    this.toHour = timeInterval.get(1);
+    this.fromHour = LocalTime.parse(timeInterval.get(0)); // example of parse content: 09:00
+    this.toHour = LocalTime.parse(timeInterval.get(1));
 
     this.weekdays = weekdays;
   }
 
   public boolean isInSchedule(LocalDateTime now){
-    //We need to add a random date (in this case today because we are checking it this instant)
-    // so LocalDateTime can parse the date
-    DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    String formattedDateTime = LocalDateTime.now().format(formatterDate);
-    LocalDateTime fromHour = LocalDateTime.parse(formattedDateTime + this.fromHour, formatter); // example of parse content: 09:00
-    LocalDateTime toHour = LocalDateTime.parse(formattedDateTime + this.toHour, formatter);
+    LocalDate nowDate = now.toLocalDate();
+    LocalTime nowTime = now.toLocalTime();
 
-    if (now.isAfter(toDate) && now.isBefore(fromDate)){
-      if (now.isAfter(toHour) && now.isBefore(fromHour)){
+    //Here we can check if the Hour and Date are true
+    //System.out.print("Is hour:" + nowDate + (nowTime.isAfter(fromHour) && nowTime.isBefore(toHour)) + " ");
+    //System.out.print("Is date:" +  nowTime+ (nowDate.isAfter(fromDate) && nowDate.isBefore(toDate)) + " ");
+
+    if (nowDate.isAfter(fromDate) && nowDate.isBefore(toDate)){
+      if (nowTime.isAfter(fromHour) && nowTime.isBefore(toHour)){
         for (String dayOfWeek : weekdays){
-          if (now.toString() == dayOfWeek){
+          if (now.getDayOfWeek().toString() == dayOfWeek){
             return true;
           }
         }

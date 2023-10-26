@@ -29,7 +29,8 @@ public final class DirectoryAreas {
         // basement
         ArrayList<Door> park = new ArrayList<>(Arrays.asList(allDoors.get(0), allDoors.get(1)));
         Space parking = new Space("parking", basement, park);
-        allDoors.get(0).setFromSpace(null);
+        System.out.print(parking.getId());
+        allDoors.get(0).setFromSpace(exterior);
         allDoors.get(0).setToSpace(parking);
         allDoors.get(1).setFromSpace(stairs);
         allDoors.get(1).setToSpace(parking);
@@ -81,9 +82,6 @@ public final class DirectoryAreas {
         Door d9 = new Door("D9"); // corridor, IT
 
         allDoors = new ArrayList<>(Arrays.asList(d1, d2, d3, d4, d5, d6, d7, d8, d9));
-        //independent
-        Space stairs = new Space("stairs", rootArea, null);
-        Space exterior = new Space("exterior", rootArea, null);
     }
     public static Area findAreaById(String id){
         return rootArea.findAreaById(id); // an Area or null if not found

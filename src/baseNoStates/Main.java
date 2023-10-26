@@ -2,6 +2,8 @@ package baseNoStates;
 // Before executing enable assertions :
 // https://se-education.org/guides/tutorials/intellijUsefulSettings.html
 
+import java.time.LocalDateTime;
+
 public class Main {
   private static void wait(int seconds) {
     try {
@@ -11,9 +13,21 @@ public class Main {
     }
   }
   public static void main(String[] args) {
+
     DirectoryAreas.makeDoors();
     DirectoryAreas.makeAreas();
     DirectoryUserGroups.makeUserGroup();
+    System.out.print("Is Schedule:" + DirectoryUserGroups.findUserByCredential("11343").canSendRequests(LocalDateTime.now()) + " ");
+    System.out.print("Is ACTION:" + DirectoryUserGroups.findUserByCredential("11343").canDoAction("lock") + " ");
+    System.out.print("Is FROM:" + DirectoryUserGroups.findUserByCredential("11343").canBeInSpace(DirectoryAreas.findDoorById("D2").getFromSpace()) + " ");
+    System.out.print("Is to:" + DirectoryUserGroups.findUserByCredential("11343").canBeInSpace(DirectoryAreas.findDoorById("D2").getToSpace()) + " ");
+    System.out.print(DirectoryAreas.findDoorById("D2").getFromSpace().id + " " + DirectoryAreas.findDoorById("D2").getToSpace().id+ " ");
+    System.out.print(DirectoryAreas.findAreaById("stairs").getId());
+    //System.out.print("space:" + DirectoryUserGroups.findUserByCredential("11343").getSpaces() + " ");
+    for (Space space : DirectoryUserGroups.findUserByCredential("11343").getSpaces()){
+      System.out.print("space:" + space.getId() + " ");
+    }
+    /*
     new WebServer();
     final int period = 2; // seconds
     Clock clock = new Clock(period);
@@ -22,7 +36,7 @@ public class Main {
     // wait for 11 seconds while the clock runs
     // but you can do other things here instead
     clock.stop();
-
+    */
     //TEST D
     //Print de door locked, unlocked
 

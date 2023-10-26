@@ -14,7 +14,8 @@ public class UserGroup {
         this.users = users;
         if (permittedSpaces != null) {
             for (String space : permittedSpaces) {
-                this.permittedSpaces.add((Space) findAreaById(space));
+                Space sp = (Space) rootArea.findAreaById(space);
+                this.permittedSpaces.add(sp);
             }
         }
         this.actions = actions;
@@ -23,7 +24,6 @@ public class UserGroup {
             user.setGroup(this);
         }
     }
-
     public String getName(){ return name; }
     public ArrayList<User> getUsers(){
         return users;
@@ -31,7 +31,4 @@ public class UserGroup {
     public ArrayList<String> getActions(){ return actions; }
     public ArrayList<Space> getPermittedSpace(){ return permittedSpaces; }
     public Schedule getSchedule(){ return schedule; }
-    public Area findAreaById(String id){
-        return rootArea.findAreaById(id);
-    }
 }

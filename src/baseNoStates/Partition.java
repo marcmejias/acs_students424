@@ -20,12 +20,22 @@ public final class Partition extends Area{
                 if (area.getId() == id){
                     return (Space) area;
                 }
-                else {
+                else if (area.getClass() == this.getClass()) {
                     area.findAreaById(id);
                 }
             }
         }
         return null;
+        /*
+        for (Area area : children) {
+            if (area.getId() == id) {
+                return area;
+            }
+            else {
+                area.findAreaById(id);
+            }
+        }
+        return this;*/
     }
     public ArrayList<Space> getSpaces() {
         ArrayList<Space> spaces = null;
