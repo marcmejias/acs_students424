@@ -3,10 +3,10 @@ package baseNoStates;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class DirectoryUserGroups {
-  private static ArrayList<UserGroup> userGroups = new ArrayList<>();
+public class DirectoryUserGroups { // This class manages all UserGroups, and by extension, Users
+  private static ArrayList<UserGroup> userGroups = new ArrayList<>(); // List of all existing UserGroups
 
-  public static void makeUserGroup(){
+  public static void makeUserGroup(){ // This functions makes and initializes Users and UserGroups
     // users without any privilege, just to keep temporally users instead of deleting them,
     // this is to withdraw all permissions but still to keep user data to give back
     // permissions later
@@ -19,7 +19,7 @@ public class DirectoryUserGroups {
     // Actions
     ArrayList<String> actionsTemporal = new ArrayList<>();
     // Schedule
-    //temporals have no schedule whatsoever, leave at null
+    // temporals have no schedule whatsoever, leave at null (MAY CAUSE SOME ERRORS)
     // Group
     UserGroup temporals = new UserGroup("temporals", temporal, actionsTemporal, temporalPermittedSpaces, null);
     userGroups.add(temporals);
@@ -76,7 +76,6 @@ public class DirectoryUserGroups {
     // all days of the week
     // all actions
     // all spaces
-
     // Users
     ArrayList<User> admin = new ArrayList<>();
     admin.add(new User("Ana", "11343"));

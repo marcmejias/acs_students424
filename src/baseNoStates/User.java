@@ -5,15 +5,13 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class User  {
-  //extends UserGroup
   private final String name;
   private final String credential;
-  private UserGroup group;
+  private UserGroup group; // group where the user belongs
 
   public User(String name, String credential) {
     this.name = name;
     this.credential = credential;
-
   }
   public UserGroup getGroup() {
     return group;
@@ -22,7 +20,7 @@ public class User  {
   public String getCredential() {
     return credential;
   }
-  public boolean canSendRequests(LocalDateTime now) {
+  public boolean canSendRequests(LocalDateTime now) { //This function calls class Schedule to check if the User is in a valid timetable
     if (group.getSchedule().isInSchedule(now)){
       return true;
     }

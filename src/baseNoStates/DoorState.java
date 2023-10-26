@@ -1,6 +1,6 @@
 package baseNoStates;
 
-public abstract class DoorState {
+public abstract class DoorState { // This manages the possible states of a given door
     protected Door door;
     protected String name;
 

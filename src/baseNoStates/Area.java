@@ -2,7 +2,7 @@ package baseNoStates;
 
 import java.util.ArrayList;
 
-public abstract class Area {
+public abstract class Area { // Areas are the non-specified version of Partitions and Spaces, i.e. their shared values
     protected final String id;
     protected static Partition rootArea;
     protected ArrayList<Door> doors;
@@ -11,8 +11,8 @@ public abstract class Area {
         this.id = id;
         rootArea = root;
         this.doors = doors;
-        if (this.rootArea != null) {
-            this.rootArea.addChild(this);
+        if (this.rootArea != null) { //If this area has a father...
+            this.rootArea.addChild(this); //we notify the father of this area that it has a new children
         }
     }
     public String getId() {

@@ -5,10 +5,10 @@ import static baseNoStates.DirectoryAreas.rootArea;
 
 public class UserGroup {
     private final String name;
-    private final ArrayList<User> users;
-    private ArrayList<String> actions;
-    private ArrayList<Space> permittedSpaces = new ArrayList<>();
-    private Schedule schedule;
+    private final ArrayList<User> users; // list of members of the group
+    private ArrayList<String> actions; // list of possible actions of the group
+    private ArrayList<Space> permittedSpaces = new ArrayList<>(); // list of allowed spaces to the group
+    private Schedule schedule; // Dates, days, and weeks allowed to the group
     public UserGroup(String name, ArrayList<User> users, ArrayList<String> actions, ArrayList<String> permittedSpaces, Schedule schedule) {
         this.name = name;
         this.users = users;
@@ -20,7 +20,7 @@ public class UserGroup {
         }
         this.actions = actions;
         this.schedule = schedule;
-        for (User user : this.users){
+        for (User user : this.users){ //For every user in users, we call the user and assign them to the userGroup
             user.setGroup(this);
         }
     }

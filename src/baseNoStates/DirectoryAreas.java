@@ -3,11 +3,11 @@ package baseNoStates;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public final class DirectoryAreas {
-    private static ArrayList<Door> allDoors;
-    public static Partition rootArea;
+public final class DirectoryAreas { // This class manages all Doors and Areas, and by extension, Spaces and Partitions
+    private static ArrayList<Door> allDoors; // List of all doors in the building
+    public static Partition rootArea; // Root of the tree, also known as building
 
-    public static void makeAreas(){
+    public static void makeAreas(){ // This function creates all Spaces and Partitions
         //root
         Partition building = new Partition("building", null, null);
         rootArea = building;
@@ -65,7 +65,7 @@ public final class DirectoryAreas {
         allDoors.get(8).setFromSpace(corridor);
         allDoors.get(8).setToSpace(IT);
     }
-    public static void makeDoors() {
+    public static void makeDoors() { // This function creates all doors
         // basement
         Door d1 = new Door("D1"); // exterior, parking
         Door d2 = new Door("D2"); // stairs, parking

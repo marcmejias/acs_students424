@@ -6,6 +6,7 @@ import java.util.Arrays;
 // A Partition is a group of spaces or partitions, it has an Id and the Doors that belong in the Partition
 public final class Partition extends Area{
     protected ArrayList<Area> children = new ArrayList<>();
+    //Important: Only Partition can have children, regardless if they are Partition or Space (therefore Area)
     public Partition(String id, Partition root, ArrayList<Door> doors) {
       super(id, root, doors);
   }
@@ -23,16 +24,6 @@ public final class Partition extends Area{
             }
         }
         return null;
-        /*
-        for (Area area : children) {
-            if (area.getId() == id) {
-                return area;
-            }
-            else {
-                area.findAreaById(id);
-            }
-        }
-        return this;*/
     }
     public ArrayList<Space> getSpaces() {
         ArrayList<Space> spaces = null;

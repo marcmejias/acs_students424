@@ -7,9 +7,8 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
+// Schedule is the timetable set to a User / UserGroup
 public class Schedule {
-  //when : date interval + weekdays + time interval in a day = Schedule
-  //private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
   private final LocalDate fromDate;
   private final LocalDate toDate;
   private final ArrayList<String> weekdays;
@@ -27,12 +26,8 @@ public class Schedule {
   }
 
   public boolean isInSchedule(LocalDateTime now){
-    LocalDate nowDate = now.toLocalDate();
-    LocalTime nowTime = now.toLocalTime();
-
-    //Here we can check if the Hour and Date are true
-    //System.out.print("Is hour:" + nowDate + (nowTime.isAfter(fromHour) && nowTime.isBefore(toHour)) + " ");
-    //System.out.print("Is date:" +  nowTime+ (nowDate.isAfter(fromDate) && nowDate.isBefore(toDate)) + " ");
+    LocalDate nowDate = now.toLocalDate(); //we adapt the LocalDateTime to LocalDate
+    LocalTime nowTime = now.toLocalTime(); //we adapt the LocalDateTime to LocalTime
 
     if (nowDate.isAfter(fromDate) && nowDate.isBefore(toDate)){
       if (nowTime.isAfter(fromHour) && nowTime.isBefore(toHour)){

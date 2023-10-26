@@ -27,7 +27,7 @@ public class Door {
     request.setDoorStateName(getStateName());
   }
 
-  private void doAction(String action) {
+  private void doAction(String action) { // This function executes the action passed through a String
     switch (action) {
       case Actions.OPEN:
         state.open();

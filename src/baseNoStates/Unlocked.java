@@ -4,7 +4,7 @@ package baseNoStates;
 public class Unlocked extends DoorState {
     public Unlocked (Door door) {
         super(door);
-        this.name = "unlocked";
+        this.name = States.UNLOCKED;
     }
     void open() {
         if (door.isClosed()) {
