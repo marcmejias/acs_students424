@@ -13,15 +13,15 @@ public final class Partition extends Area{
       children.add(child);
     }
     public Area findAreaById(String id){
-        if (this.id == id){
-            return this;
-        } else {
-            for (Area area : children){
-                return area.findAreaById(id);
+        for (Area area : children){
+            if (area.getId() == id){
+                return area;
             }
-
+            else {
+                area.findAreaById(id);
+            }
         }
-        return null;
+        return this;
     }
     public ArrayList<Space> getSpaces() {
         ArrayList<Space> spaces = null;

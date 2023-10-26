@@ -12,10 +12,11 @@ public class UserGroup {
     public UserGroup(String name, ArrayList<User> users, ArrayList<String> actions, ArrayList<String> permittedSpaces, Schedule schedule) {
         this.name = name;
         this.users = users;
-        //this.permittedSpaces = permittedSpaces;
+        ArrayList<Space> spaces = new ArrayList<>();
         for (String space : permittedSpaces) {
-            this.permittedSpaces.add((Space)rootArea.findAreaById(space));
+            spaces.add((Space)rootArea.findAreaById(space));
         }
+        this.permittedSpaces = spaces;
         this.actions = actions;
         this.schedule = schedule;
         for (User user : this.users){
