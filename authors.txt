@@ -1,2 +1,2 @@
-Marc Mejias Flores - 1606376:
-Oriol:
+Marc Mejias Flores - 1606376: Comentaris, creacio dels tests i prints, creacio de Area, Clock, Door, Partition, Space i User
+Oriol Casanova Ramirez - 1531174: UML, algun comentari, creacio de DirectoryUserGroups, DirectoryAreas, UserGroups i DoorState(Locked i Unlocked)
