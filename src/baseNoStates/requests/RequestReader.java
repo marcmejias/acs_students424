@@ -97,12 +97,15 @@ public class RequestReader implements Request {
     } else {
       authorized = user.canSendRequests(now) && user.canBeInSpace(door.getFromSpace())
           && user.canBeInSpace(door.getToSpace()) && user.canDoAction(action);
-
+      String newLine = System.getProperty("line.separator");
       //Test prints in order to check individual components of the statement above
-      System.out.print("Is Schedule:" + user.canSendRequests(now) + " ");
-      System.out.print("Is from:" + user.canBeInSpace(door.getFromSpace()) + " ");
-      System.out.print("Is to:" + user.canBeInSpace(door.getToSpace()) + " ");
-      System.out.print("Is action:" + user.canDoAction(action) + " " + action + " /");
+      System.out.print("Is Schedule:" + user.canSendRequests(now) + newLine );
+      System.out.print("Is from:" + user.canBeInSpace(door.getFromSpace()) + newLine );
+      System.out.print("Is to:" + user.canBeInSpace(door.getToSpace()) + newLine );
+      if (door.getId() == "D8"){
+        System.out.print("door to:" + door.getToSpace().getId() + newLine );
+      }
+      System.out.print("Is action:" + user.canDoAction(action) + " " + action + newLine);
     }
   }
 }

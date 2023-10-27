@@ -7,7 +7,6 @@ public class Space extends Area {
   protected ArrayList<Door> doors = new ArrayList<Door>();
   public Space(String id, Partition root) {
     super(id, root);
-    //this.doors = doors;
   }
   public Space findAreaById(String id){
     if (this.id.equals(id)) {
