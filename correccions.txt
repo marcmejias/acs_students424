@@ -1,0 +1,4 @@
+1) Ens habia demanat aplicar funcionalitat a RequestArea mitjançant getDoorsGivingAccess
+2) Ho hem resolt aplicant la funcio. (No es que varem tenir problemes, només que ens varem oblidar d'aplicar-la)
+   Pero al fer-ho hem tingut que modifica con es creen les Areas i com s'asignan a UserGroups. (Aquest ha estat l'unic contratemps)
+3) S'adjuntat un video en la carpeta src com a mostra del resultat obtingut
