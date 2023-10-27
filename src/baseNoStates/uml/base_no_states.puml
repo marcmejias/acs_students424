@@ -26,7 +26,7 @@ of Webserver
 end note
 
 class DirectoryAreas {
-- {static} rootArea : Area
++ {static} rootArea : Area
 - {static} allDoors : Door[]
 + {static} makeAreas()
 + {static} findAreaById(id : String) : Area
@@ -38,8 +38,8 @@ DirectoryAreas --> "*" Door : "allDoors"
 DirectoryAreas --> "1" Area : "rootArea"
 
 class DirectoryUsersGroup {
-- {static} users : User[]
-+ {static} makeUserGroups()
+- {static} userGroups : ArrayList<UserGroup>
++ {static} makeUserGroup()
 + {static} findUserByCredential(credential : String) : User
 }
 
@@ -51,22 +51,30 @@ UserGroup *--> "*" User : "users"
 class Door {
 - id : String
 - closed : boolean
+- state : DoorState
+- from : Space
+- to : Space
 + Door(id : String)
 + processRequest(request : RequestReader)
 + setState(doorState : DoorState)
 + toJson() : JSONObject
-'+ toString() : String
-'+ isClosed() :boolean
-'+ setClosed(b : boolean)
-'+ getStateName() : String
++ toString() : String
++ isClosed() : boolean
++ setClosed(b : boolean)
++ getId() : String
++ getFromSpace : Space
++ getToSpace : Space
++ getStateName() : String
 - doAction(action : String)
 }
+
 
 package DoorStates{
 abstract DoorState{
 #door : Door
 #name : String
 + DoorState(door : Door)
++ getName() : String
 - {abstract} open()
 - {abstract} close()
 - {abstract} lock()
@@ -82,6 +90,7 @@ class Unlocked {
 + close()
 + lock()
 + unlock()
++ Unlocked (door : Door)
 }
 
 class Locked {
@@ -90,6 +99,7 @@ class Locked {
 + close()
 + lock()
 + unlock()
++ Locked (door : Door)
 }
 class States{
 {static}+LOCKED : String
@@ -107,22 +117,27 @@ class Actions{
 class User {
 - name : String
 - credential : String
+- group : UserGroup
 + User(name: String, credential: String)
 + toString() : String
++ setGroup()
++ canSendRequests : boolean
++ canBeInSpace : boolean
++ canDoAction : boolean
 }
 
 
 
 abstract Area{
 -id :String
--{static}rootArea :Area
--doors : ArrayList<Door>
--children : ArrayList<Area>
+-{static} rootArea : Partition
 +getId()
 +addChild()
 +{abstract}getDoorsGivingAccess() : Door[]
 +{abstract}findAreaById(id : String) : Area
 +{abstract}getSpaces() : Space[]
++ Area (id : String, root : Partition)
+
 }
 
 class Clock{
@@ -147,9 +162,11 @@ class Partition{
 }
 
 class Space{
+-doors : ArrayList<Door>
 +Space(id : String, root : Area, doors : ArrayList<Door>
 +findAreaById(id : String) : Space
 +getSpaces() : ArrayList<Space>
++getDoorsGivingAccess() : ArrayList<Door>
 }
 class Schedule{
 -fromDate : LocalDate
@@ -170,15 +187,20 @@ class UserGroup{
 -actions : ArrayList<String>
 -permittedSpaces : ArrayList<Space>
 -schedule : Schedule
-+getName()
-+getUsers()
-+getActions()
-+getPermittedSpace()
-+getSchedule()
++getName() : String
++getUsers() : ArrayList<User>
++getActions() : ArrayList<String>
++getPermittedSpace() : ArrayList<Area>
++getSchedule() : Schedule
 +UserGroup(name : String, users : ArrayList<User>, actions : ArrayList<String>,
 permittedSpaces : ArrayList<String>, schedule : Schedule)
 }
 
+Door "1"-->"1" Space : from
+Door "1"-->"1" Space : to
+Space *-->"1" Door : doors
+Partition --> "*" Area
+UserGroup *--> "1" Schedule
 class Main {
 + {static} main(args : String)
 }
