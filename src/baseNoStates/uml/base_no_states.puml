@@ -140,18 +140,26 @@ class Clock{
 Area --> "*" Partition
 Area --> "*" Space
 class Partition{
+-children : ArrayList<Area>
 +Partition(id : String, root : Area, doors : ArrayList<Door>)
++findAreaById(id : String) : Area
++getSpaces() : ArrayList<Space>
 }
 
 class Space{
 +Space(id : String, root : Area, doors : ArrayList<Door>
++findAreaById(id : String) : Space
++getSpaces() : ArrayList<Space>
 }
 class Schedule{
--dateInterval : ArrayList<String>
+-fromDate : LocalDate
+-toDate : LocalDate
+-fromHour : LocalTime
+-toHour : LocalTime
 -weekdays : ArrayList<String>
--timeInterval : ArrayList<String>
 +Schedule(dateInterval : ArrayList<String>,weekdays : ArrayList<String>,
 timeInterval : ArrayList<String>)
++isInSchedule(now : LocalDateTime) : boolean
 }
 
 

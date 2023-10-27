@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public abstract class Area { // Areas are the non-specified version of Partitions and Spaces, i.e. their shared values
     protected final String id;
     protected static Partition rootArea;
-    protected ArrayList<Door> doors;
+    protected ArrayList<Door> doors; //TODO poner en Space, solo spaces tienen Doors
 
     public Area (String id, Partition root, ArrayList<Door> doors){
         this.id = id;

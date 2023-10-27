@@ -10,6 +10,7 @@ public final class Partition extends Area{
     public Partition(String id, Partition root, ArrayList<Door> doors) {
       super(id, root, doors);
   }
+  //TODO lockChildren que llama a todos su hijos para que bloqueen sus puertas.
     public void addChild(Area child) {
       children.add(child);
     }
