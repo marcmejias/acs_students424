@@ -37,7 +37,7 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
     ArrayList<String> actionsEmployee = new ArrayList<String>(Arrays.asList(Actions.OPEN, Actions.CLOSE));
     // Spaces
     ArrayList<String> employeePermittedSpaces =
-            new ArrayList<>(Arrays.asList("stairs", "exterior", "hall", "room 1", "room 2", "corridor", "room 3", "IT"));
+            new ArrayList<>(Arrays.asList("ground_floor","floor1","stairs", "exterior", "hall", "room 1", "room 2", "corridor", "room 3", "IT"));
     // Schedule
     ArrayList<String> employeeDates = new ArrayList<String>(Arrays.asList("2023-09-01", "2024-03-01"));
     ArrayList<String> employeeDays = new ArrayList<String>(Arrays.asList("MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"));
@@ -61,7 +61,7 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
         Actions.LOCK, Actions.UNLOCK, Actions.UNLOCK_SHORTLY));
     //  Spaces
     ArrayList<String> managerPermittedSpaces =
-            new ArrayList<>(Arrays.asList("stairs", "exterior", "parking", "hall", "room 1", "room 2", "corridor", "room 3", "IT"));
+            new ArrayList<>(Arrays.asList("ground_floor","floor1","basement","stairs", "exterior", "parking", "hall", "room 1", "room 2", "corridor", "room 3", "IT"));
     //  Schedule
     ArrayList<String> managerDates = new ArrayList<String>(Arrays.asList("2023-09-01", "2024-03-01"));
     ArrayList<String> managerDays = new ArrayList<String>(Arrays.asList("MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"));
@@ -84,7 +84,7 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
         Actions.LOCK, Actions.UNLOCK, Actions.UNLOCK_SHORTLY));
     //  Spaces
     ArrayList<String> adminPermittedSpaces =
-            new ArrayList<>(Arrays.asList("stairs", "exterior", "parking", "hall", "room 1", "room 2", "corridor", "room 3", "IT"));
+            new ArrayList<>(Arrays.asList("ground_floor","floor1","basement","stairs", "exterior", "parking", "hall", "room 1", "room 2", "corridor", "room 3", "IT"));
     // Schedule
     ArrayList<String> adminDates = new ArrayList<String>(Arrays.asList("2023-01-01", "2100-01-01"));
     ArrayList<String> adminDays = new ArrayList<String>(Arrays.asList("MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"));

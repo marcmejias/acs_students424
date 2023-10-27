@@ -15,23 +15,21 @@ public final class Partition extends Area{
       children.add(child);
     }
     public Area findAreaById(String id){
-        if (this.id == id) {
+        if (this.id.equals(id)) {
             return this;
         }
         for (Area area : children) {
-            Area res = area.findAreaById(id);
-            if (res != null) {
-                return res;
+            Area aux = area.findAreaById(id);
+            if (aux != null) {
+                return aux;
             }
         }
         return null;
     }
     public ArrayList<Space> getSpaces() {
-        ArrayList<Space> spaces = null;
+        ArrayList<Space> spaces = new ArrayList<Space>();
         for (Area space : children){
-            if(space.rootArea.getId() == id){
-                spaces.add((Space) space);
-            }
+            spaces.addAll(space.getSpaces());
         }
         return spaces;
     }

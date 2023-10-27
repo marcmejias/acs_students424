@@ -27,12 +27,7 @@ public class User  {
     return false;
   }
   public boolean canBeInSpace(Space space) {
-    for (Space spaces: getSpaces()) {
-      if(spaces == space){
-        return true;
-      }
-    }
-    return false;
+    return group.getPermittedSpace().contains(space);
   }
   public boolean canDoAction(String action) {
     for (String actions: group.getActions()) {
@@ -41,9 +36,6 @@ public class User  {
       }
     }
     return false;
-  }
-  public ArrayList<Space> getSpaces(){
-    return group.getPermittedSpace();
   }
   @Override
   public String toString() {

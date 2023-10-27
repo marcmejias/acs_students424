@@ -13,7 +13,7 @@ public class Main {
     }
   }
   public static void main(String[] args) {
-    DirectoryAreas.makeDoors();
+    //DirectoryAreas.makeDoors();
     DirectoryAreas.makeAreas();
     DirectoryUserGroups.makeUserGroup();
     //Test prompts independent of Webserver
@@ -31,8 +31,7 @@ public class Main {
     }
     */
     new WebServer();
-    final int period = 2; // seconds
-    /*
+    /*final int period = 2; // seconds
     Clock clock = new Clock(period);
     clock.start();
     wait(11);

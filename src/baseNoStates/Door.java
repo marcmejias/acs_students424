@@ -8,13 +8,19 @@ public class Door {
   private DoorState state;
   private Space from;
   private Space to;
-
   public Door(String id) {
     this.id = id;
     closed = true;
     state = new Unlocked(this);
   }
-
+  public Door(String id, Space from, Space to) {
+    this.id = id;
+    this.from = from;
+    this.to = to;
+    to.addDoor(this);
+    closed = true;
+    state = new Unlocked(this);
+  }
   public void processRequest(RequestReader request) {
     // it is the Door that process the request because the door has and knows
     // its state, and if closed or open
@@ -26,7 +32,6 @@ public class Door {
     }
     request.setDoorStateName(getStateName());
   }
-
   private void doAction(String action) { // This function executes the action passed through a String
     switch (action) {
       case Actions.OPEN:
@@ -50,7 +55,6 @@ public class Door {
         System.exit(-1);
     }
   }
-
   public boolean isClosed() {
     return closed;
   }
@@ -63,12 +67,6 @@ public class Door {
   }
   public String getStateName() {
     return state.getName();
-  }
-  public void setFromSpace(Space from) {
-    this.from = from;
-  }
-  public void setToSpace(Space to) {
-    this.to = to;
   }
   public Space getFromSpace(){
     return from;

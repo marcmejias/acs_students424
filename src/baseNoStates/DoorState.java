@@ -6,7 +6,6 @@ public abstract class DoorState { // This manages the possible states of a given
 
     public DoorState (Door door) {
         this.door = door;
-        //this.name = this.;
     }
 
     public String getName() {

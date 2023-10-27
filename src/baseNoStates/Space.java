@@ -5,13 +5,12 @@ import java.util.ArrayList;
 // A Space is a subcategory of Area that cannot have children of Area class (Partitions or Spaces), only doors
 public class Space extends Area {
   protected ArrayList<Door> doors = new ArrayList<Door>();
-  public Space(String id, Partition root, ArrayList<Door> doors) {
+  public Space(String id, Partition root) {
     super(id, root);
-    this.doors = doors;
+    //this.doors = doors;
   }
-  @Override
   public Space findAreaById(String id){
-    if (this.id == id) {
+    if (this.id.equals(id)) {
       return this;
     }
     return null;
@@ -23,5 +22,8 @@ public class Space extends Area {
   }
   public ArrayList<Door> getDoorsGivingAccess() {
     return doors;
+  }
+  public void addDoor(Door door) {
+    doors.add(door);
   }
 }

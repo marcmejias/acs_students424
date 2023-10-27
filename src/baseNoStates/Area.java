@@ -9,7 +9,6 @@ public abstract class Area { // Areas are the non-specified version of Partition
     public Area (String id, Partition root){
         this.id = id;
         rootArea = root;
-        //this.doors = doors;
         if (this.rootArea != null) { //If this area has a father...
             this.rootArea.addChild(this); //we notify the father of this area that it has a new children
         }
