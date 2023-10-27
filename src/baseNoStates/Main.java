@@ -32,13 +32,14 @@ public class Main {
     */
     new WebServer();
     final int period = 2; // seconds
+    /*
     Clock clock = new Clock(period);
     clock.start();
     wait(11);
     // wait for 11 seconds while the clock runs
     // but you can do other things here instead
     clock.stop();
-
+    */
     //TEST D
     //Print de door locked, unlocked
 
