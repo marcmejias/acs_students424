@@ -7,6 +7,7 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
   private static ArrayList<UserGroup> userGroups = new ArrayList<>(); // List of all existing UserGroups
 
   public static void makeUserGroup(){ // This functions makes and initializes Users and UserGroups
+    // TEMPORALS :
     // users without any privilege, just to keep temporally users instead of deleting them,
     // this is to withdraw all permissions but still to keep user data to give back
     // permissions later
@@ -21,10 +22,11 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
     // Schedule
     // temporals have no schedule whatsoever, leave at null (MAY CAUSE SOME ERRORS)
     // Group
-    UserGroup temporals = new UserGroup("temporals", temporal, actionsTemporal, temporalPermittedSpaces, null);
+    UserGroup temporals =
+            new UserGroup("temporals", temporal, actionsTemporal, temporalPermittedSpaces, null);
     userGroups.add(temporals);
 
-    // employees :
+    // EMPLOYEES :
     // Sep. 1 2023 to Mar. 1 2024
     // week days 9-17h
     // just shortly unlock
@@ -37,17 +39,20 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
     ArrayList<String> actionsEmployee = new ArrayList<String>(Arrays.asList(Actions.OPEN, Actions.CLOSE));
     // Spaces
     ArrayList<String> employeePermittedSpaces =
-            new ArrayList<>(Arrays.asList("ground_floor","floor1","stairs", "exterior", "hall", "room1", "room2", "corridor", "room3", "IT"));
+            new ArrayList<>(Arrays.asList("ground_floor","floor1","stairs",
+                    "exterior", "hall", "room1", "room2", "corridor", "room3", "IT"));
     // Schedule
     ArrayList<String> employeeDates = new ArrayList<String>(Arrays.asList("2023-09-01", "2024-03-01"));
-    ArrayList<String> employeeDays = new ArrayList<String>(Arrays.asList("MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"));
+    ArrayList<String> employeeDays =
+            new ArrayList<String>(Arrays.asList("MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"));
     ArrayList<String> employeeHours = new ArrayList<String>(Arrays.asList("09:00", "17:00"));
     Schedule employeeSchedule = new Schedule(employeeDates, employeeDays, employeeHours);
     // Group
-    UserGroup employees = new UserGroup("employees", employee, actionsEmployee, employeePermittedSpaces, employeeSchedule);
+    UserGroup employees =
+            new UserGroup("employees", employee, actionsEmployee, employeePermittedSpaces, employeeSchedule);
     userGroups.add(employees);
 
-    // managers :
+    // MANAGERS :
     // Sep. 1 2023 to Mar. 1 2024
     // week days + saturday, 8-20h
     // all actions
@@ -57,21 +62,25 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
     manager.add(new User("Manel", "95783"));
     manager.add(new User("Marta", "05827"));
     // Actions
-    ArrayList<String> actionsManager = new ArrayList<String>(Arrays.asList(Actions.OPEN, Actions.CLOSE,
-        Actions.LOCK, Actions.UNLOCK, Actions.UNLOCK_SHORTLY));
+    ArrayList<String> actionsManager =
+            new ArrayList<String>(Arrays.asList(Actions.OPEN, Actions.CLOSE,
+                    Actions.LOCK, Actions.UNLOCK, Actions.UNLOCK_SHORTLY));
     //  Spaces
     ArrayList<String> managerPermittedSpaces =
-            new ArrayList<>(Arrays.asList("ground_floor","floor1","basement","stairs", "exterior", "parking", "hall", "room1", "room2", "corridor", "room3", "IT"));
+            new ArrayList<>(Arrays.asList("ground_floor","floor1","basement","stairs",
+                    "exterior", "parking", "hall", "room1", "room2", "corridor", "room3", "IT"));
     //  Schedule
     ArrayList<String> managerDates = new ArrayList<String>(Arrays.asList("2023-09-01", "2024-03-01"));
-    ArrayList<String> managerDays = new ArrayList<String>(Arrays.asList("MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"));
+    ArrayList<String> managerDays =
+            new ArrayList<String>(Arrays.asList("MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"));
     ArrayList<String> managerHours = new ArrayList<String>(Arrays.asList("08:00", "20:00"));
     Schedule managerSchedule = new Schedule(managerDates, managerDays, managerHours);
     //Group
-    UserGroup managers = new UserGroup("managers", manager, actionsManager, managerPermittedSpaces, managerSchedule);
+    UserGroup managers =
+            new UserGroup("managers", manager, actionsManager, managerPermittedSpaces, managerSchedule);
     userGroups.add(managers);
 
-    // admin :
+    // ADMINS :
     // always=2023 to 2100
     // all days of the week
     // all actions
@@ -80,14 +89,18 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
     ArrayList<User> admin = new ArrayList<>();
     admin.add(new User("Ana", "11343"));
     // Actions
-    ArrayList<String> actionsAdmin = new ArrayList<String>(Arrays.asList(Actions.OPEN, Actions.CLOSE,
-        Actions.LOCK, Actions.UNLOCK, Actions.UNLOCK_SHORTLY));
+    ArrayList<String> actionsAdmin =
+            new ArrayList<String>(Arrays.asList(Actions.OPEN, Actions.CLOSE,
+                    Actions.LOCK, Actions.UNLOCK, Actions.UNLOCK_SHORTLY));
     //  Spaces
     ArrayList<String> adminPermittedSpaces =
-            new ArrayList<>(Arrays.asList("ground_floor","floor1","basement","stairs", "exterior", "parking", "hall", "room1", "room2", "corridor", "room3", "IT"));
+            new ArrayList<>(Arrays.asList("ground_floor","floor1","basement","stairs",
+                    "exterior", "parking", "hall", "room1", "room2", "corridor", "room3", "IT"));
     // Schedule
     ArrayList<String> adminDates = new ArrayList<String>(Arrays.asList("2023-01-01", "2100-01-01"));
-    ArrayList<String> adminDays = new ArrayList<String>(Arrays.asList("MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"));
+    ArrayList<String> adminDays =
+            new ArrayList<String>(Arrays.asList("MONDAY", "TUESDAY",
+                    "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"));
     ArrayList<String> adminHours = new ArrayList<String>(Arrays.asList("00:00", "23:59"));
     Schedule adminSchedule = new Schedule(adminDates, adminDays, adminHours);
     // Group
@@ -95,6 +108,8 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
     userGroups.add(admins);
   }
   public static User findUserByCredential(String id) {
+    // This functions searches the userGroup tree and the user tree inside that group
+    // until it finds the user with the same id
     for (UserGroup users : userGroups) {
       for (User user : users.getUsers()){
         if (user.getCredential().equals(id)) {

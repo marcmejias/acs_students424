@@ -2,18 +2,18 @@ package baseNoStates;
 import baseNoStates.requests.RequestReader;
 import org.json.JSONObject;
 
-public class Door {
+public class Door { // This class keeps tracts of the properties of any given door in the system
   private final String id;
   private boolean closed; // physically
-  private DoorState state;
-  private Space from;
-  private Space to;
-  public Door(String id) {
+  private DoorState state; // State of the door, can either be locked or unlocked (currently)
+  private Space from; // The space where the keypad to open the door is accesible
+  private Space to; // The space where the door gives access to
+  public Door(String id) { // Default constructor, lacks from and to spaces
     this.id = id;
     closed = true;
-    state = new Unlocked(this);
+    state = new Unlocked(this); // Every door is unlocked by default
   }
-  public Door(String id, Space from, Space to) {
+  public Door(String id, Space from, Space to) { // Complete constructor, this is the one usually called
     this.id = id;
     this.from = from;
     this.to = to;
@@ -74,7 +74,6 @@ public class Door {
   public Space getToSpace(){
     return to;
   }
-
   @Override
   public String toString() {
     return "Door{"
@@ -83,7 +82,6 @@ public class Door {
         + ", state=" + getStateName()
         + "}";
   }
-
   public JSONObject toJson() {
     JSONObject json = new JSONObject();
     json.put("id", id);

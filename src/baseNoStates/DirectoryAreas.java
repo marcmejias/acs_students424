@@ -10,18 +10,15 @@ public final class DirectoryAreas { // This class manages all Doors and Areas, a
     public static void makeAreas(){ // This function creates all Spaces and Partitions
         //root
         rootArea = new Partition("building", null);
-
         //independent
         Space exterior = new Space("exterior", rootArea);
         Space stairs = new Space("stairs", rootArea);
-
         // basement
         Partition basement = new Partition("basement", rootArea);
         Space parking = new Space("parking", basement);
         Door d1 = new Door("D1", exterior, parking);
         Door d2 = new Door("D2",  stairs, parking);
-
-        //ground_floor
+        // ground_floor
         Partition groundFloor = new Partition("ground_floor", rootArea);
         Space hall = new Space("hall", groundFloor);
         Space room1 = new Space("room1", groundFloor);
@@ -30,7 +27,6 @@ public final class DirectoryAreas { // This class manages all Doors and Areas, a
         Door d4 = new Door("D4", stairs, hall);
         Door d5 = new Door("D5",hall, room1);
         Door d6 = new Door("D6",hall, room2);
-
         // first_floor
         Partition floor1 = new Partition("floor1", rootArea);
         Space corridor = new Space("corridor", floor1);
@@ -39,10 +35,11 @@ public final class DirectoryAreas { // This class manages all Doors and Areas, a
         Door d7 = new Door("D7",stairs, corridor);
         Door d8 = new Door("D8",corridor, room3);
         Door d9 = new Door("D9",corridor, IT);
-
+        // and we add all created doors to a list so we can have easier access to all of them
         allDoors = new ArrayList<>(Arrays.asList(d1, d2, d3, d4, d5, d6, d7, d8, d9));
     }
-    public static Area findAreaById(String id){
+    public static Area findAreaById(String id){ // This function travels the Area tree
+        // to find the Area with the matching id
         Area area = rootArea.findAreaById(id);
         //System.out.print("Is area:" + area.getId() + area.getSpaces().toString() +  " ");
         if (area == null) {
@@ -51,7 +48,8 @@ public final class DirectoryAreas { // This class manages all Doors and Areas, a
         } else
             return area;
     }
-    public static Door findDoorById(String id) {
+    public static Door findDoorById(String id) { // This function travels the allDoors list
+        // to find the door with the matching id
         for (Door door : allDoors) {
             if (door.getId().equals(id)) {
                 return door;

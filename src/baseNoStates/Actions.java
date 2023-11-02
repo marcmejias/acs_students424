@@ -1,7 +1,6 @@
 package baseNoStates;
 
-// Contains the actions that a User can do with a Door
-public final class Actions {
+public final class Actions { // This class contains the possible actions that a User can do with a Door
   // possible actions in reader and area requests
   public static final String LOCK = "lock";
   public static final String UNLOCK = "unlock";

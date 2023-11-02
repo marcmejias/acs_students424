@@ -1,7 +1,8 @@
 package baseNoStates;
 
-// A Door in the Unlocked state can be opened, closed or locked
-public class Unlocked extends DoorState {
+
+public class Unlocked extends DoorState { // This class dictates the cases to follow if a door is unlocked
+    // A Door in the Unlocked state can be opened, closed or locked
     public Unlocked (Door door) {
         super(door);
         this.name = States.UNLOCKED;
