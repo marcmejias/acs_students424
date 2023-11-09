@@ -2,6 +2,9 @@ package baseNoStates;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import org.sfl4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public final class DirectoryAreas { // This class manages all Doors and Areas, and by extension, Spaces and Partitions
     private static ArrayList<Door> allDoors; // List of all doors in the building
