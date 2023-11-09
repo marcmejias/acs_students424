@@ -47,8 +47,7 @@ public class Door { // This class keeps tracts of the properties of any given do
         state.unlock();
         break;
       case Actions.UNLOCK_SHORTLY:
-        // TODO
-        System.out.println("Action " + action + " not implemented yet");
+        state.unlockShortly();
         break;
       default:
         assert false : "Unknown action " + action;

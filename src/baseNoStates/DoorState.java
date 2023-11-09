@@ -13,4 +13,6 @@ public abstract class DoorState { // This class manages the possible states of a
     abstract void close(); // This is called when the door is ordered to close (see specific states for implementation)
     abstract void lock(); // This is called when the door is ordered to lock (see specific states for implementation)
     abstract void unlock(); //This is called when the door is ordered to unlock (see specific states for implementation)
+    abstract void unlockShortly();
+        //This is called when the door is ordered to unlock for a short time (see specific states for implementation)
 }
