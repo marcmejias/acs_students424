@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="json" type="repository">
+  <library name="slf4j-api-1.7.12.jarslf4j-api-1.7.12.jar" type="repository">
     <properties maven-id="org.json:json:20230618" />
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/json/json/20230618/json-20230618.jar!/" />

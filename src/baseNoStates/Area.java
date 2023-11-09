@@ -2,6 +2,8 @@ package baseNoStates;
 
 import java.util.ArrayList;
 
+
+
 public abstract class Area { // Areas are the non-specified version of Partitions and Spaces, i.e. their shared values
     protected final String id;
     protected static Partition rootArea;
