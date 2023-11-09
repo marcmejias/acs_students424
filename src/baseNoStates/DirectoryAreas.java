@@ -1,11 +1,14 @@
 package baseNoStates;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public final class DirectoryAreas { // This class manages all Doors and Areas, and by extension, Spaces and Partitions
     private static ArrayList<Door> allDoors; // List of all doors in the building
     public static Partition rootArea; // Root of the tree, also known as building
+    private static final Logger logger = LoggerFactory.getLogger("fita2");
 
     public static void makeAreas(){ // This function creates all Spaces and Partitions
         //root
@@ -43,7 +46,7 @@ public final class DirectoryAreas { // This class manages all Doors and Areas, a
         Area area = rootArea.findAreaById(id);
         //System.out.print("Is area:" + area.getId() + area.getSpaces().toString() +  " ");
         if (area == null) {
-            System.out.println("Area not valid: " + id);
+            logger.warn("Area not valid: ", id);
             return null;
         } else
             return area;
@@ -55,7 +58,7 @@ public final class DirectoryAreas { // This class manages all Doors and Areas, a
                 return door;
             }
         }
-        System.out.println("door with id " + id + " not found");
+        logger.debug("door with id ", id, " not found");
         return null; // otherwise we get a Java error
     }
     public static ArrayList<Door> getAllDoors() {

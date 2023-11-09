@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class RequestReader implements Request {
   private final String credential; // who
@@ -20,6 +22,7 @@ public class RequestReader implements Request {
   private final ArrayList<String> reasons; // why not authorized
   private String doorStateName;
   private boolean doorClosed;
+  private static final Logger logger = LoggerFactory.getLogger("fita2");
 
   public RequestReader(String credential, String action, LocalDateTime now, String doorId) {
     this.credential = credential;
@@ -97,15 +100,11 @@ public class RequestReader implements Request {
     } else {
       authorized = user.canSendRequests(now) && user.canBeInSpace(door.getFromSpace())
           && user.canBeInSpace(door.getToSpace()) && user.canDoAction(action);
-      String newLine = System.getProperty("line.separator");
       //Test prints in order to check individual components of the statement above
-      System.out.print("Is Schedule:" + user.canSendRequests(now) + newLine );
-      System.out.print("Is from:" + user.canBeInSpace(door.getFromSpace()) + newLine );
-      System.out.print("Is to:" + user.canBeInSpace(door.getToSpace()) + newLine );
-      if (door.getId() == "D8"){
-        System.out.print("door to:" + door.getToSpace().getId() + newLine );
-      }
-      System.out.print("Is action:" + user.canDoAction(action) + " " + action + newLine);
+      logger.info("Is Schedule:" + user.canSendRequests(now));
+      logger.info("Is from:" + user.canBeInSpace(door.getFromSpace()));
+      logger.info("Is to:" + user.canBeInSpace(door.getToSpace()));
+      logger.info("Is action:" + user.canDoAction(action), " ", action);
     }
   }
 }

@@ -1,14 +1,15 @@
 package baseNoStates.requests;
 
-        import baseNoStates.Actions;
-        import baseNoStates.Area;
-        import baseNoStates.DirectoryAreas;
-        import baseNoStates.Door;
-        import org.json.JSONArray;
-        import org.json.JSONObject;
-
-        import java.time.LocalDateTime;
-        import java.util.ArrayList;
+import baseNoStates.Actions;
+import baseNoStates.Area;
+import baseNoStates.DirectoryAreas;
+import baseNoStates.Door;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 
 public class RequestArea implements Request {
@@ -17,7 +18,7 @@ public class RequestArea implements Request {
   private final String areaId;
   private final LocalDateTime now;
   private ArrayList<RequestReader> requests = new ArrayList<>();
-
+  private static final Logger logger = LoggerFactory.getLogger("fita2");
 
   public RequestArea(String credential, String action, LocalDateTime now, String areaId) {
     this.credential = credential;
@@ -42,7 +43,6 @@ public class RequestArea implements Request {
       jsonRequests.put(rd.answerToJson());
     }
     json.put("requestsDoors", jsonRequests);
-    //json.put("todo", "request areas not yet implemented");
     return json;
   }
 
@@ -68,8 +68,6 @@ public class RequestArea implements Request {
   // it won't be authorized and nothing will happen to them.
   public void process() {
     // commented out until Area, Space and Partition are implemented
-
-
     // make the door requests and put them into the area request to be authorized later and
     // processed later
     Area area = DirectoryAreas.findAreaById(areaId);
@@ -77,9 +75,9 @@ public class RequestArea implements Request {
     if (area != null) {
       // is null when from the app we click on an action but no place is selected because
       // there (flutter) I don't control like I do in javascript that all the parameters are provided
-      System.out.print("ha entrado:" + area.getId() + " ");
+      logger.info("has entered: ", area.getId(), " ");
       for (Door door : area.getDoorsGivingAccess())
-        System.out.print("door:" + door.getId() + " ");
+        logger.info("door: ", door.getId(), " ");
       // Make all the door requests, one for each door in the area, and process them.
       // Look for the doors in the spaces of this area that give access to them.
       for (Door door : area.getDoorsGivingAccess()) {

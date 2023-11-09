@@ -1,6 +1,8 @@
 package baseNoStates;
 import baseNoStates.requests.RequestReader;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Door { // This class keeps tracts of the properties of any given door in the system
   private final String id;
@@ -8,6 +10,7 @@ public class Door { // This class keeps tracts of the properties of any given do
   private DoorState state; // State of the door, can either be locked or unlocked (currently)
   private Space from; // The space where the keypad to open the door is accesible
   private Space to; // The space where the door gives access to
+  private static final Logger logger = LoggerFactory.getLogger("fita2");
   public Door(String id) { // Default constructor, lacks from and to spaces
     this.id = id;
     closed = true;
@@ -28,7 +31,7 @@ public class Door { // This class keeps tracts of the properties of any given do
       String action = request.getAction();
       doAction(action);
     } else {
-      System.out.println("not authorized");
+      logger.info("not authorized");
     }
     request.setDoorStateName(getStateName());
   }

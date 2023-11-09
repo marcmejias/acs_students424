@@ -1,10 +1,14 @@
 package baseNoStates;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DirectoryUserGroups { // This class manages all UserGroups, and by extension, Users
   private static ArrayList<UserGroup> userGroups = new ArrayList<>(); // List of all existing UserGroups
+  private static final Logger logger = LoggerFactory.getLogger("fita2");
 
   public static void makeUserGroup(){ // This functions makes and initializes Users and UserGroups
     // TEMPORALS :
@@ -117,7 +121,7 @@ public class DirectoryUserGroups { // This class manages all UserGroups, and by 
         }
       }
     }
-    System.out.println("user with credential " + id + " not found");
+    logger.debug("user with credential ", id, " not found");
     return null; // otherwise we get a Java error
   }
 }
