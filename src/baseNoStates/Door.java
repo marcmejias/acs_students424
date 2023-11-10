@@ -91,4 +91,5 @@ public class Door { // This class keeps tracts of the properties of any given do
     json.put("closed", closed);
     return json;
   }
+  public void acceptVisitor(Visitor visitor) {visitor.visitDoor(this);}
 }
