@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class VisitorFindAreaById implements Visitor {
-  public static Logger logger = LoggerFactory.getLogger("fita2");
+  public static Logger logger = LoggerFactory.getLogger(VisitorFindAreaById.class);
   @Override
   public void visitPartition(Partition partition) {
   //TODO move all find,,,Id from all classes and directories to Visitors REFACTORING

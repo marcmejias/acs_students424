@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Propped extends DoorState {
-    private static final Logger logger = LoggerFactory.getLogger("fita1");
+    private static final Logger logger = LoggerFactory.getLogger(Propped.class);
     public Propped(Door door) {
         super(door);
         this.name = States.PROPPED;
