@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 public class Unlocked extends DoorState { // This class dictates the cases to follow if a door is unlocked
     // A Door in the Unlocked state can be opened, closed or locked
-    private static final Logger logger = LoggerFactory.getLogger("fita2");
+    private static final Logger logger = LoggerFactory.getLogger(Unlocked.class);
     public Unlocked (Door door) {
         super(door);
         this.name = States.UNLOCKED;

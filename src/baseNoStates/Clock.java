@@ -7,11 +7,12 @@ import java.util.Observable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 public class Clock extends Observable {
     private LocalDateTime date;
     private Timer timer;
     private int period; // seconds
-    private static final Logger logger = LoggerFactory.getLogger("fita2");
+    private static final Logger logger = LoggerFactory.getLogger(Clock.class);
     public Clock(int period) {
         this.period = period;
         timer = new Timer();

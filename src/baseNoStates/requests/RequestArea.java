@@ -18,7 +18,7 @@ public class RequestArea implements Request {
   private final String areaId;
   private final LocalDateTime now;
   private ArrayList<RequestReader> requests = new ArrayList<>();
-  private static final Logger logger = LoggerFactory.getLogger("fita2");
+  private static final Logger logger = LoggerFactory.getLogger("fita1");
 
   public RequestArea(String credential, String action, LocalDateTime now, String areaId) {
     this.credential = credential;

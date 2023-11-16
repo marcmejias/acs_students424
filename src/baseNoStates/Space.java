@@ -26,4 +26,5 @@ public class Space extends Area {
   public void addDoor(Door door) {
     doors.add(door);
   }
+  public void acceptVisitor(Visitor visitor) {visitor.visitSpace(this);}
 }

@@ -42,4 +42,5 @@ public final class Partition extends Area {
       }
       return doorList;
   }
+  public void acceptVisitor(Visitor visitor) {visitor.visitPartition(this);}
 }

@@ -22,7 +22,7 @@ public class RequestReader implements Request {
   private final ArrayList<String> reasons; // why not authorized
   private String doorStateName;
   private boolean doorClosed;
-  private static final Logger logger = LoggerFactory.getLogger("fita2");
+  private static final Logger logger = LoggerFactory.getLogger("fita1");
 
   public RequestReader(String credential, String action, LocalDateTime now, String doorId) {
     this.credential = credential;
