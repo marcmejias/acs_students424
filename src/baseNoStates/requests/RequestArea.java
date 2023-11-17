@@ -1,15 +1,13 @@
 package baseNoStates.requests;
 
-import baseNoStates.Actions;
-import baseNoStates.Area;
-import baseNoStates.DirectoryAreas;
-import baseNoStates.Door;
+import baseNoStates.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import static baseNoStates.DirectoryAreas.rootArea;
 
 
 public class RequestArea implements Request {
@@ -67,10 +65,12 @@ public class RequestArea implements Request {
   // them to all of its doors. For some it may be authorized and action will be done, for others
   // it won't be authorized and nothing will happen to them.
   public void process() {
-    // commented out until Area, Space and Partition are implemented
-    // make the door requests and put them into the area request to be authorized later and
-    // processed later
+    //TODO IMPLEMENT
     Area area = DirectoryAreas.findAreaById(areaId);
+    //VisitorFindAreaById v = new VisitorFindAreaById(areaId);
+    //rootArea.acceptVisitor(v);
+    //Area area = v.getResult();
+    //
     // an Area is a Space or a Partition
     if (area != null) {
       // is null when from the app we click on an action but no place is selected because

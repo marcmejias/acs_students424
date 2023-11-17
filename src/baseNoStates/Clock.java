@@ -13,7 +13,7 @@ public class Clock extends Observable {
     private Timer timer;
     private int period; // seconds
     private static Clock single_instance = null;
-    private static final Logger logger = LoggerFactory.getLogger(Clock.class);
+    private static final Logger logger = LoggerFactory.getLogger("fita2");
     public Clock(int period) {
         this.period = period;
         timer = new Timer();
@@ -22,7 +22,7 @@ public class Clock extends Observable {
         TimerTask repeatedTask = new TimerTask() {
             public void run() { // instance of anonymous class
                 date = LocalDateTime.now();
-                logger.debug("run() executed at ", date);
+                logger.debug("run() executed at " + date);
                 setChanged();
                 notifyObservers(date);
             }

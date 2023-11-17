@@ -10,7 +10,7 @@ public class Door { // This class keeps tracts of the properties of any given do
   private DoorState state; // State of the door, can either be locked or unlocked (currently)
   private Space from; // The space where the keypad to open the door is accesible
   private Space to; // The space where the door gives access to
-  private static final Logger logger = LoggerFactory.getLogger(Door.class);
+  private static final Logger logger = LoggerFactory.getLogger("fita1");
   public Door(String id) { // Default constructor, lacks from and to spaces
     this.id = id;
     closed = true;

@@ -4,10 +4,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class VisitorFindAreaById implements Visitor {
-  public static Logger logger = LoggerFactory.getLogger(VisitorFindAreaById.class);
+  private String id;
+  private Area result;
+  public static Logger logger = LoggerFactory.getLogger("fita2");
+
+  public VisitorFindAreaById(String id) {
+    this.id = id;
+  }
+  public Area getResult(){
+    return result;
+  }
   @Override
   public void visitPartition(Partition partition) {
-  //TODO move all find,,,Id from all classes and directories to Visitors REFACTORING
+   //TODO move all find,,,Id from all classes and directories to Visitors REFACTORING
   }
   @Override
   public void visitSpace(Space space) {
