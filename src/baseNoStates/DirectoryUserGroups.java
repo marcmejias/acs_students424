@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class DirectoryUserGroups { // This class manages all UserGroups, and by extension, Users
   private static ArrayList<UserGroup> userGroups = new ArrayList<>(); // List of all existing UserGroups
-  private static final Logger logger = LoggerFactory.getLogger("fita1");
+  private static final Logger logger = LoggerFactory.getLogger(DirectoryUserGroups.class);
 
   public static void makeUserGroup(){ // This functions makes and initializes Users and UserGroups
     // TEMPORALS :

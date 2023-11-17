@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class VisitorGetSpaces implements Visitor {
-  public static Logger logger = LoggerFactory.getLogger("fita2");
+  public static Logger logger = LoggerFactory.getLogger(VisitorGetSpaces.class);
   @Override
   public void visitPartition(Partition partition) {
 
