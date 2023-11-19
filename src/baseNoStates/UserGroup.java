@@ -15,7 +15,8 @@ public class UserGroup { // A userGroup is an agrupation of users that share the
         this.users = users;
         if (permittedSpaces != null) { // if the userGroup has permission for certain spaces...
             for (String space : permittedSpaces) { // ...add all those spaces to the permissions
-                Area sp = rootArea.findAreaById(space);
+                VisitorFindAreaById v = new VisitorFindAreaById(rootArea, space);
+                Area sp = v.getResult();
                 this.permittedSpaces.add(sp);
             }
         }
@@ -25,11 +26,19 @@ public class UserGroup { // A userGroup is an agrupation of users that share the
             user.setGroup(this);
         }
     }
-    public String getName(){ return name; }
-    public ArrayList<User> getUsers(){
+    public String getName() {
+        return name;
+    }
+    public ArrayList<User> getUsers() {
         return users;
     }
-    public ArrayList<String> getActions(){ return actions; }
-    public ArrayList<Area> getPermittedSpace(){ return permittedSpaces; }
-    public Schedule getSchedule(){ return schedule; }
+    public ArrayList<String> getActions() {
+        return actions;
+    }
+    public ArrayList<Area> getPermittedSpace() {
+        return permittedSpaces;
+    }
+    public Schedule getSchedule() {
+        return schedule;
+    }
 }

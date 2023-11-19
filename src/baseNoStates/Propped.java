@@ -11,7 +11,7 @@ public class Propped extends DoorState {
     }
     void open() {
         // fall through
-        logger.warn("Can't open door ", door.getId(), " because it's propped");
+        logger.warn("Can't open door " + door.getId() + " because it's propped");
     }
     void close(){
         logger.info("Door " + door.getId() + " has been closed and will now be locked");
@@ -20,14 +20,14 @@ public class Propped extends DoorState {
     }
     void lock(){
         // fall through
-        logger.warn("Can't lock door " , door.getId(), " because it's propped");
+        logger.warn("Can't lock door " + door.getId() + " because it's propped");
     }
     void unlock(){
         // fall through
-        logger.warn("Can't unlock door ", door.getId(), " because it's propped");
+        logger.warn("Can't unlock door " + door.getId() + " because it's propped");
     }
     void unlockShortly(){
         // fall through
-        logger.warn("Can't unlock shortly door ", door.getId(), " because it's propped");
+        logger.warn("Can't unlock shortly door " + door.getId() + " because it's propped");
     }
 }

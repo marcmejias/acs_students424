@@ -41,6 +41,7 @@ public final class DirectoryAreas { // This class manages all Doors and Areas, a
         // and we add all created doors to a list so we can have easier access to all of them
         allDoors = new ArrayList<>(Arrays.asList(d1, d2, d3, d4, d5, d6, d7, d8, d9));
     }
+    /*
     public static Area findAreaById(String id){ // This function travels the Area tree
         // to find the Area with the matching id
         Area area = rootArea.findAreaById(id);
@@ -50,7 +51,7 @@ public final class DirectoryAreas { // This class manages all Doors and Areas, a
             return null;
         } else
             return area;
-    }
+    }*/
     public static Door findDoorById(String id) { // This function travels the allDoors list
         // to find the door with the matching id
         for (Door door : allDoors) {

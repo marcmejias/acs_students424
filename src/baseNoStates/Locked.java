@@ -12,22 +12,22 @@ public class Locked extends DoorState { // This class dictates the cases to foll
     }
     void open() {
         // fall through
-        logger.info("Can't open door ", door.getId(), " because it's locked");
+        logger.info("Can't open door " + door.getId() + " because it's locked");
     }
     void close(){
         // fall through
-        logger.info("Can't close door ", door.getId(), " because it's locked");
+        logger.info("Can't close door " + door.getId() + " because it's locked");
     }
     void lock(){
         // fall through
-        logger.info("Can't lock door ", door.getId(), " because it's locked");
+        logger.info("Can't lock door " + door.getId() + " because it's locked");
     }
     void unlock(){
-        logger.info("Door ", door.getId(), "has been unlocked");
+        logger.info("Door " + door.getId() + "has been unlocked");
         door.setState(new Unlocked(door));
     }
     void unlockShortly(){
-        logger.info("Door", door.getId(), "has been temporarily unlocked for 10 seconds");
+        logger.info("Door" + door.getId() + "has been temporarily unlocked for 10 seconds");
         door.setState(new UnlockedShortly(door));
     }
 }

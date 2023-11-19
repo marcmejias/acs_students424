@@ -1,7 +1,6 @@
 package baseNoStates;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 // A Partition is a group of spaces or partitions, it has an Id and the Doors that belong in the Partition
 public final class Partition extends Area {
@@ -14,33 +13,10 @@ public final class Partition extends Area {
     public void addChild(Area child) {
       children.add(child);
     }
-    public Area findAreaById(String id){
-        // This function recursively travels through the Area tree to search for the given id
-        if (this.id.equals(id)) {
-            return this;
-        }
-        for (Area area : children) {
-            Area aux = area.findAreaById(id);
-            if (aux != null) {
-                return aux;
-            }
-        }
-        return null;
+    public ArrayList<Area> getChild() {
+        return children;
     }
-    public ArrayList<Space> getSpaces() { // This function returns every children that is a Space
-        ArrayList<Space> spaces = new ArrayList<Space>();
-        for (Area space : children){
-            spaces.addAll(space.getSpaces());
-        }
-        return spaces;
+    public void acceptVisitor(Visitor visitor) {
+        visitor.visitPartition(this);
     }
-  public ArrayList<Door> getDoorsGivingAccess() { // This function recursively travels through the Partition's children
-        // and adds the set of Doors of every Space children
-      ArrayList<Door> doorList = new ArrayList<Door>();
-      for (Area area : children) {
-        doorList.addAll(area.getDoorsGivingAccess());
-      }
-      return doorList;
-  }
-  public void acceptVisitor(Visitor visitor) {visitor.visitPartition(this);}
 }

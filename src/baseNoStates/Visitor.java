@@ -1,12 +1,8 @@
 package baseNoStates;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+// This class implements Visitor pattern and access the classes Space, Partition, and Door
 public interface Visitor {
-  public static final Logger logger = LoggerFactory.getLogger("fita2");
-
-  public void visitSpace(Space space);
-  public void visitPartition(Partition partition);
-  public void visitDoor(Door door);
+  void visitSpace(Space space);
+  void visitPartition(Partition partition);
+  void visitDoor(Door door);
 }
