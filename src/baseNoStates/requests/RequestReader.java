@@ -22,7 +22,8 @@ public class RequestReader implements Request {
   private final ArrayList<String> reasons; // why not authorized
   private String doorStateName;
   private boolean doorClosed;
-  private static final Logger logger = LoggerFactory.getLogger("fita1");
+  //TODO logs request
+  //private static final Logger logger = LoggerFactory.getLogger("Fita1");
 
   public RequestReader(String credential, String action, LocalDateTime now, String doorId) {
     this.credential = credential;
@@ -101,10 +102,10 @@ public class RequestReader implements Request {
       authorized = user.canSendRequests(now) && user.canBeInSpace(door.getFromSpace())
           && user.canBeInSpace(door.getToSpace()) && user.canDoAction(action);
       //Test prints in order to check individual components of the statement above
-      logger.info("Is Schedule:" + user.canSendRequests(now));
-      logger.info("Is from:" + user.canBeInSpace(door.getFromSpace()));
-      logger.info("Is to:" + user.canBeInSpace(door.getToSpace()));
-      logger.info("Is action:" + user.canDoAction(action), " ", action);
+      //logger.warn("Is Schedule:{}", user.canSendRequests(now));
+      //logger.warn("Is from: {}",  user.canBeInSpace(door.getFromSpace()));
+      //logger.warn("Is to: {}", user.canBeInSpace(door.getToSpace()));
+      //logger.warn("Is action: {} {}", user.canDoAction(action), action);
     }
   }
 }

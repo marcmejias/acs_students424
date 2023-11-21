@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 public class VisitorGetSpaces implements Visitor {
   private ArrayList<Space> result = new ArrayList<>();
-  public static Logger logger = LoggerFactory.getLogger("fita2");
+  public static Logger logger = LoggerFactory.getLogger("fita2.visitor");
 
   public VisitorGetSpaces(Area area) {
-    logger.info("Searching for spaces in area: " + area.getId());
+    logger.info("Searching for spaces in area: {}", area.getId());
     area.acceptVisitor(this);
   }
   public ArrayList<Space> getResult(){

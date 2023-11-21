@@ -31,7 +31,7 @@ public class Door { // This class keeps tracts of the properties of any given do
       String action = request.getAction();
       doAction(action);
     } else {
-      logger.info("not authorized");
+      logger.warn("not authorized");
     }
     request.setDoorStateName(getStateName());
   }

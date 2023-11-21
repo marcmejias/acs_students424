@@ -8,7 +8,7 @@ import java.util.Arrays;
 public final class DirectoryAreas { // This class manages all Doors and Areas, and by extension, Spaces and Partitions
     private static ArrayList<Door> allDoors; // List of all doors in the building
     public static Partition rootArea; // Root of the tree, also known as building
-    private static final Logger logger = LoggerFactory.getLogger("fita1");
+    private static final Logger logger = LoggerFactory.getLogger("Fita1");
 
     public static void makeAreas(){ // This function creates all Spaces and Partitions
         //root
@@ -59,7 +59,7 @@ public final class DirectoryAreas { // This class manages all Doors and Areas, a
                 return door;
             }
         }
-        logger.debug("door with id ", id, " not found");
+        logger.info("door with id {} not found",  id);
         return null; // otherwise we get a Java error
     }
     public static ArrayList<Door> getAllDoors() {

@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class VisitorFindDoorsGivingAccess implements Visitor {
   private ArrayList<Door> result = new ArrayList<Door>();
-  public static Logger logger = LoggerFactory.getLogger("fita2");
+  public static Logger logger = LoggerFactory.getLogger("fita2.visitor");
 
   public VisitorFindDoorsGivingAccess(Area area) {
-    logger.debug("Searching for doors in area: " + area.getId());
+    logger.debug("Searching for doors in area: {}", area.getId());
     area.acceptVisitor(this);
   }
   public ArrayList<Door> getResult(){
@@ -20,13 +20,13 @@ public class VisitorFindDoorsGivingAccess implements Visitor {
   @Override
   public void visitPartition(Partition partition) {
     for (Area area : partition.getChild()) {
-      logger.debug("travelling : " + area.getId());
+      logger.debug("travelling : {}", area.getId());
       area.acceptVisitor(this);
     }
   }
   @Override
   public void visitSpace(Space space) {
-    logger.debug("selecting doors from : " + space.getId());
+    logger.debug("selecting doors from : {}", space.getId());
     result.addAll(space.getDoorsGivingAccess());
   }
   @Override

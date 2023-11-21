@@ -6,11 +6,11 @@ import org.slf4j.LoggerFactory;
 public class VisitorFindAreaById implements Visitor {
   private String id;
   private Area result;
-  public static Logger logger = LoggerFactory.getLogger("fita2");
+  public static Logger logger = LoggerFactory.getLogger("fita2.visitor");
 
   public VisitorFindAreaById(Area rootArea, String id) {
     this.id = id;
-    logger.debug("Searching for area: " + id);
+    logger.debug("Searching for area: {}", id);
     rootArea.acceptVisitor(this);
   }
   public Area getResult(){
@@ -19,7 +19,7 @@ public class VisitorFindAreaById implements Visitor {
   @Override
   public void visitPartition(Partition partition) {
     if (partition.getId().equals(id)) {
-      logger.debug("Area " + id + " found.");
+      logger.debug("Area {} found", id);
       result = partition;
     }
     for (Area area : partition.getChild()) {
