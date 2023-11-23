@@ -1,16 +1,14 @@
-package baseNoStates.requests;
+package base.no_states.requests;
 
-import baseNoStates.DirectoryAreas;
-import baseNoStates.DirectoryUserGroups;
-import baseNoStates.Door;
-import baseNoStates.User;
+import base.no_states.DirectoryAreas;
+import base.no_states.DirectoryUserGroups;
+import base.no_states.Door;
+import base.no_states.User;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class RequestReader implements Request {
   private final String credential; // who

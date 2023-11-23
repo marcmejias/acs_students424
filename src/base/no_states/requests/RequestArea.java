@@ -1,13 +1,13 @@
-package baseNoStates.requests;
+package base.no_states.requests;
 
-import baseNoStates.*;
+import base.no_states.*;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import static baseNoStates.DirectoryAreas.rootArea;
+import static base.no_states.DirectoryAreas.rootArea;
 
 
 public class RequestArea implements Request {

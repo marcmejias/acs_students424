@@ -1,4 +1,4 @@
-package baseNoStates;
+package base.no_states;
 
 public final class Actions { // This class contains the possible actions that a User can do with a Door
   // possible actions in reader and area requests

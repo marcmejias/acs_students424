@@ -1,4 +1,4 @@
-package baseNoStates;
+package base.no_states;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

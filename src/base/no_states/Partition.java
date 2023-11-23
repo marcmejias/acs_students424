@@ -1,4 +1,4 @@
-package baseNoStates;
+package base.no_states;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,6 @@
-package baseNoStates;
+package base.no_states;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Objects;
 
 public class User { // This class instances the users of our system
   private final String name;

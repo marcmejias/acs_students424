@@ -1,7 +1,7 @@
-package baseNoStates;
+package base.no_states;
 
 import java.util.ArrayList;
-import static baseNoStates.DirectoryAreas.rootArea;
+import static base.no_states.DirectoryAreas.rootArea;
 
 public class UserGroup { // A userGroup is an agrupation of users that share the same permissions and responsabilities
     private final String name;

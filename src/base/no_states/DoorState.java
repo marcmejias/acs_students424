@@ -1,4 +1,4 @@
-package baseNoStates;
+package base.no_states;
 
 public abstract class DoorState { // This class manages the possible states of any given door
     protected Door door; // This is the door we want it's state tracked and/or changed
