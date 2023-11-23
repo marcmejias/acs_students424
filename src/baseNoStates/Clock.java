@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 public class Clock extends Observable {
     private LocalDateTime date;
     private Timer timer;
+    public static final int NUMERO = 1000;
     private int period; // seconds
     private static Clock singleInstance = null;
     private static final Logger LOGGER = LoggerFactory.getLogger("Fita2.Clock");
@@ -27,7 +28,7 @@ public class Clock extends Observable {
                 notifyObservers(date);
             }
         };
-        timer.scheduleAtFixedRate(repeatedTask, 0, 1000 * period);
+        timer.scheduleAtFixedRate(repeatedTask, 0, NUMERO * period);
     }
     public static synchronized Clock getInstance() {
         if (singleInstance == null) {
