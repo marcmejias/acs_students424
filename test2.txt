@@ -1,0 +1,56 @@
+19:10:49.171 [main] DEBUG Fita2 - Searching for area: ground_floor
+19:10:49.174 [main] DEBUG Fita2 - Area ground_floor found
+19:10:49.174 [main] DEBUG Fita2 - Searching for area: floor1
+19:10:49.175 [main] DEBUG Fita2 - Area floor1 found
+19:10:49.175 [main] DEBUG Fita2 - Searching for area: stairs
+19:10:49.175 [main] DEBUG Fita2 - Searching for area: exterior
+19:10:49.175 [main] DEBUG Fita2 - Searching for area: hall
+19:10:49.175 [main] DEBUG Fita2 - Searching for area: room1
+19:10:49.175 [main] DEBUG Fita2 - Searching for area: room2
+19:10:49.175 [main] DEBUG Fita2 - Searching for area: corridor
+19:10:49.176 [main] DEBUG Fita2 - Searching for area: room3
+19:10:49.176 [main] DEBUG Fita2 - Searching for area: IT
+19:10:49.176 [main] DEBUG Fita2 - Searching for area: ground_floor
+19:10:49.176 [main] DEBUG Fita2 - Area ground_floor found
+19:10:49.177 [main] DEBUG Fita2 - Searching for area: floor1
+19:10:49.177 [main] DEBUG Fita2 - Area floor1 found
+19:10:49.177 [main] DEBUG Fita2 - Searching for area: basement
+19:10:49.177 [main] DEBUG Fita2 - Area basement found
+19:10:49.177 [main] DEBUG Fita2 - Searching for area: stairs
+19:10:49.177 [main] DEBUG Fita2 - Searching for area: exterior
+19:10:49.177 [main] DEBUG Fita2 - Searching for area: parking
+19:10:49.177 [main] DEBUG Fita2 - Searching for area: hall
+19:10:49.178 [main] DEBUG Fita2 - Searching for area: room1
+19:10:49.178 [main] DEBUG Fita2 - Searching for area: room2
+19:10:49.178 [main] DEBUG Fita2 - Searching for area: corridor
+19:10:49.178 [main] DEBUG Fita2 - Searching for area: room3
+19:10:49.178 [main] DEBUG Fita2 - Searching for area: IT
+19:10:49.178 [main] DEBUG Fita2 - Searching for area: ground_floor
+19:10:49.178 [main] DEBUG Fita2 - Area ground_floor found
+19:10:49.179 [main] DEBUG Fita2 - Searching for area: floor1
+19:10:49.179 [main] DEBUG Fita2 - Area floor1 found
+19:10:49.179 [main] DEBUG Fita2 - Searching for area: basement
+19:10:49.179 [main] DEBUG Fita2 - Area basement found
+19:10:49.179 [main] DEBUG Fita2 - Searching for area: stairs
+19:10:49.179 [main] DEBUG Fita2 - Searching for area: exterior
+19:10:49.179 [main] DEBUG Fita2 - Searching for area: parking
+19:10:49.179 [main] DEBUG Fita2 - Searching for area: hall
+19:10:49.180 [main] DEBUG Fita2 - Searching for area: room1
+19:10:49.180 [main] DEBUG Fita2 - Searching for area: room2
+19:10:49.180 [main] DEBUG Fita2 - Searching for area: corridor
+19:10:49.180 [main] DEBUG Fita2 - Searching for area: room3
+19:10:49.180 [main] DEBUG Fita2 - Searching for area: IT
+19:11:09.100 [Thread-2] DEBUG Fita2 - A clock has been instantiated
+19:11:09.101 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:09.100996700
+19:11:10.104 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:10.104309300
+19:11:11.105 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:11.105110500
+19:11:11.314 [Thread-3] WARN  Fita2 - Can't unlock door D2 because it's unlocked shortly
+19:11:12.103 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:12.103916
+19:11:13.114 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:13.114024800
+19:11:13.310 [Thread-4] INFO  Fita2 - Door D2 has been locked
+19:11:14.101 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:14.101083100
+19:11:15.113 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:15.113273400
+19:11:16.115 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:16.115465800
+19:11:17.102 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:17.102268400
+19:11:18.102 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:18.102541
+19:11:19.108 [Timer-1] DEBUG Fita2 - tick del reloj en: 2023-11-23T19:11:19.108549700

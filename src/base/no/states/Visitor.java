@@ -1,4 +1,4 @@
-package base_no_states;
+package base.no.states;
 
 // This class implements Visitor pattern and
 // access the classes Space, Partition, and Door

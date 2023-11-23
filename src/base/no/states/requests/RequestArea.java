@@ -1,11 +1,11 @@
-package base_no_states.requests;
+package base.no.states.requests;
 
-import base_no_states.Area;
-import base_no_states.Door;
-import base_no_states.VisitorFindDoorsGivingAccess;
-import base_no_states.VisitorFindAreaById;
-import base_no_states.Actions;
-import base_no_states.DirectoryAreas;
+import base.no.states.Area;
+import base.no.states.Door;
+import base.no.states.VisitorFindDoorsGivingAccess;
+import base.no.states.VisitorFindAreaById;
+import base.no.states.Actions;
+import base.no.states.DirectoryAreas;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

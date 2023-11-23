@@ -1,5 +1,5 @@
-package base_no_states;
-import base_no_states.requests.RequestReader;
+package base.no.states;
+import base.no.states.requests.RequestReader;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

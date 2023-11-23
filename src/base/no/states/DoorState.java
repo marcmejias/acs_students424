@@ -1,4 +1,4 @@
-package base_no_states;
+package base.no.states;
 
 // This class manages the possible states of any given door
 public abstract class DoorState {
