@@ -1,6 +1,11 @@
 package base_no_states.requests;
 
-import base_no_states.*;
+import base_no_states.Area;
+import base_no_states.Door;
+import base_no_states.VisitorFindDoorsGivingAccess;
+import base_no_states.VisitorFindAreaById;
+import base_no_states.Actions;
+import base_no_states.DirectoryAreas;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -66,7 +71,8 @@ public class RequestArea implements Request {
   // For some it may be authorized and action will be done,
   // for othersit won't be authorized and nothing will happen to them.
   public void process() {
-    VisitorFindAreaById v = new VisitorFindAreaById(DirectoryAreas.getRootArea(), areaId);
+    VisitorFindAreaById v =
+        new VisitorFindAreaById(DirectoryAreas.getRootArea(), areaId);
     Area area = v.getResult();
     //
     // an Area is a Space or a Partition

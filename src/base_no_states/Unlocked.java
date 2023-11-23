@@ -7,7 +7,7 @@ public class Unlocked extends DoorState {
     // This class dictates the cases to follow if a door is unlocked
     // A Door in the Unlocked state can be opened, closed or locked
     private static final Logger LOGGER =
-        LoggerFactory.getLogger("fita1.unlocked");
+        LoggerFactory.getLogger("Fita1");
     public Unlocked(final Door door) {
         super(door);
         this.name = States.UNLOCKED;

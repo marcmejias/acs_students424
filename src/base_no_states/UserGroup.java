@@ -24,7 +24,8 @@ public class UserGroup {
             for (String space : permittedSpacesLocal) {
                 // ...add all those spaces to the permissions
                 VisitorFindAreaById v =
-                    new VisitorFindAreaById(DirectoryAreas.getRootArea(), space);
+                    new VisitorFindAreaById(DirectoryAreas.getRootArea(),
+                        space);
                 Area sp = v.getResult();
                 this.permittedSpaces.add(sp);
             }

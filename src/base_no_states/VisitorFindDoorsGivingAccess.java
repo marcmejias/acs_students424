@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class VisitorFindDoorsGivingAccess implements Visitor {
   private ArrayList<Door> result = new ArrayList<Door>();
   private static final Logger LOGGER =
-      LoggerFactory.getLogger("fita2.visitor");
+      LoggerFactory.getLogger("Fita2");
 
   public VisitorFindDoorsGivingAccess(final Area area) {
     LOGGER.debug("Searching for doors in area: {}", area.getId());

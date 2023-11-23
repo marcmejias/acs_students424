@@ -14,7 +14,7 @@ public class Clock extends Observable {
     public static final int NUMERO = 1000;
     private int period; // seconds
     private static Clock singleInstance = null;
-    private static final Logger LOGGER = LoggerFactory.getLogger("Fita2.Clock");
+    private static final Logger LOGGER = LoggerFactory.getLogger("Fita2");
     public Clock(final int periodLocal) {
         this.period = periodLocal;
         timer = new Timer();

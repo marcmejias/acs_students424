@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 public class VisitorFindAreaById implements Visitor {
   private String id;
   private Area result;
-  private static final Logger LOGGER = LoggerFactory.getLogger("fita2.visitor");
+  private static final Logger LOGGER = LoggerFactory.getLogger("Fita2");
 
   public VisitorFindAreaById(final Area rootArea, final String idLocal) {
     this.id = idLocal;

@@ -12,7 +12,7 @@ public class UnlockedShortly extends DoorState implements Observer {
     private LocalDateTime time;
     private static Clock clock = new Clock(1);
     private static final Logger LOGGER =
-        LoggerFactory.getLogger("Fita2.locked");
+        LoggerFactory.getLogger("Fita2");
 
     public UnlockedShortly(final Door door) {
         super(door);

@@ -8,7 +8,7 @@ public class Locked extends DoorState {
     // A Door in the Locked state can be unlocked or
     // unlocked_shortly (latter not implemented)
     private static final Logger LOGGER =
-        LoggerFactory.getLogger("fita1.states");
+        LoggerFactory.getLogger("Fita1");
     public Locked(final Door door) {
         super(door);
         this.name = States.LOCKED;
@@ -30,7 +30,7 @@ public class Locked extends DoorState {
         door.setState(new Unlocked(door));
     }
     void unlockShortly() {
-        LOGGER.info("Door {} has been temporarily unlocked for 10 seconds",
+        LOGGER.debug("Door {} has been temporarily unlocked for 10 seconds",
             door.getId());
         door.setState(new UnlockedShortly(door));
     }

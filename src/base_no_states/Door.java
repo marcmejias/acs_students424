@@ -13,7 +13,7 @@ public class Door {
   // The space where the keypad to open the door is accesible
   private Space from;
   private Space to; // The space where the door gives access to
-  private static final Logger LOGGER = LoggerFactory.getLogger("fita1");
+  private static final Logger LOGGER = LoggerFactory.getLogger("Fita1");
   // Default constructor, lacks from and to spaces
   public Door(final String idLocal) {
     this.id = idLocal;
