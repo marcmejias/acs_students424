@@ -1,41 +1,49 @@
-package base.no_states;
-import base.no_states.requests.RequestReader;
+package baseNoStates;
+import baseNoStates.requests.RequestReader;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Door { // This class keeps tracts of the properties of any given door in the system
+// This class keeps tracts of the properties of any given door in the system
+public class Door {
   private final String id;
   private boolean closed; // physically
-  private DoorState state; // State of the door, can either be locked or unlocked (currently)
-  private Space from; // The space where the keypad to open the door is accesible
+  // State of the door, can either be locked or unlocked (currently)
+  private DoorState state;
+  // The space where the keypad to open the door is accesible
+  private Space from;
   private Space to; // The space where the door gives access to
-  private static final Logger logger = LoggerFactory.getLogger("fita1");
-  public Door(String id) { // Default constructor, lacks from and to spaces
-    this.id = id;
+  private static final Logger LOGGER = LoggerFactory.getLogger("fita1");
+  // Default constructor, lacks from and to spaces
+  public Door(final String idLocal) {
+    this.id = idLocal;
     closed = true;
     state = new Unlocked(this); // Every door is unlocked by default
   }
-  public Door(String id, Space from, Space to) { // Complete constructor, this is the one usually called
-    this.id = id;
-    this.from = from;
-    this.to = to;
-    to.addDoor(this);
+  // Complete constructor, this is the one usually called
+  public Door(final String idLocal, final Space fromLocal,
+              final Space toLocal) {
+    this.id = idLocal;
+    this.from = fromLocal;
+    this.to = toLocal;
+    toLocal.addDoor(this);
     closed = true;
     state = new Unlocked(this);
   }
-  public void processRequest(RequestReader request) {
-    // it is the Door that process the request because the door has and knows
+  public void processRequest(final RequestReader request) {
+    // it is the Door that process the request
+    // because the door has and knows
     // its state, and if closed or open
     if (request.isAuthorized()) {
       String action = request.getAction();
       doAction(action);
     } else {
-      logger.warn("not authorized");
+      LOGGER.warn("not authorized");
     }
     request.setDoorStateName(getStateName());
   }
-  private void doAction(String action) { // This function executes the action passed through a String
+  // This function executes the action passed through a String
+  private void doAction(final String action) {
     switch (action) {
       case Actions.OPEN:
         state.open();
@@ -60,9 +68,11 @@ public class Door { // This class keeps tracts of the properties of any given do
   public boolean isClosed() {
     return closed;
   }
-  public void setClosed(boolean action) {  closed = action; }
-  public void setState(DoorState state) {
-    this.state = state;
+  public void setClosed(final boolean action) {
+    closed = action;
+  }
+  public void setState(final DoorState stateLocal) {
+    this.state = stateLocal;
   }
   public String getId() {
     return id;
@@ -70,10 +80,10 @@ public class Door { // This class keeps tracts of the properties of any given do
   public String getStateName() {
     return state.getName();
   }
-  public Space getFromSpace(){
+  public Space getFromSpace() {
     return from;
   }
-  public Space getToSpace(){
+  public Space getToSpace() {
     return to;
   }
   @Override
@@ -91,5 +101,7 @@ public class Door { // This class keeps tracts of the properties of any given do
     json.put("closed", closed);
     return json;
   }
-  public void acceptVisitor(Visitor visitor) {visitor.visitDoor(this);}
+  public void acceptVisitor(final Visitor visitor) {
+    visitor.visitDoor(this);
+  }
 }

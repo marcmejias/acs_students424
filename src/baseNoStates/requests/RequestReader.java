@@ -1,9 +1,9 @@
-package base.no_states.requests;
+package baseNoStates.requests;
 
-import base.no_states.DirectoryAreas;
-import base.no_states.DirectoryUserGroups;
-import base.no_states.Door;
-import base.no_states.User;
+import baseNoStates.DirectoryAreas;
+import baseNoStates.DirectoryUserGroups;
+import baseNoStates.Door;
+import baseNoStates.User;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -23,15 +23,16 @@ public class RequestReader implements Request {
   //TODO logs request
   //private static final Logger logger = LoggerFactory.getLogger("Fita1");
 
-  public RequestReader(String credential, String action, LocalDateTime now, String doorId) {
-    this.credential = credential;
-    this.action = action;
-    this.doorId = doorId;
+  public RequestReader(final String credentialLocal, final String actionLocal,
+                       final LocalDateTime nowLocal, final String doorIdLocal) {
+    this.credential = credentialLocal;
+    this.action = actionLocal;
+    this.doorId = doorIdLocal;
     reasons = new ArrayList<>();
-    this.now = now;
+    this.now = nowLocal;
   }
 
-  public void setDoorStateName(String name) {
+  public void setDoorStateName(final String name) {
     doorStateName = name;
   }
 
@@ -43,7 +44,7 @@ public class RequestReader implements Request {
     return authorized;
   }
 
-  public void addReason(String reason) {
+  public void addReason(final String reason) {
     reasons.add(reason);
   }
 
@@ -76,7 +77,8 @@ public class RequestReader implements Request {
     return json;
   }
 
-  // see if the request is authorized and put this into the request, then send it to the door.
+  // see if the request is authorized and put this into the request,
+  // then send it to the door.
   // if authorized, perform the action.
   public void process() {
     User user = DirectoryUserGroups.findUserByCredential(credential);
@@ -85,25 +87,23 @@ public class RequestReader implements Request {
     authorize(user, door);
     // this sets the boolean authorize attribute of the request
     door.processRequest(this);
-    // even if not authorized we process the request, so that if desired we could log all
+    // even if not authorized we process the request,
+    // so that if desired we could log all
     // the requests made to the server as part of processing the request
     doorClosed = door.isClosed();
   }
 
-  // the result is put into the request object plus, if not authorized, why not,
+  // the result is put into the request object plus,
+  // if not authorized, why not,
   // only for testing
-  private void authorize(User user, Door door) {
+  private void authorize(final User user, final Door door) {
     if (user == null) {
       authorized = false;
       addReason("user doesn't exists");
     } else {
-      authorized = user.canSendRequests(now) && user.canBeInSpace(door.getFromSpace())
+      authorized = user.canSendRequests(now)
+          && user.canBeInSpace(door.getFromSpace())
           && user.canBeInSpace(door.getToSpace()) && user.canDoAction(action);
-      //Test prints in order to check individual components of the statement above
-      //logger.warn("Is Schedule:{}", user.canSendRequests(now));
-      //logger.warn("Is from: {}",  user.canBeInSpace(door.getFromSpace()));
-      //logger.warn("Is to: {}", user.canBeInSpace(door.getToSpace()));
-      //logger.warn("Is action: {} {}", user.canDoAction(action), action);
     }
   }
 }

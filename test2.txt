@@ -40,3 +40,773 @@
 13:20:20.310 [main] DEBUG fita2.visitor - Searching for area: corridor
 13:20:20.310 [main] DEBUG fita2.visitor - Searching for area: room3
 13:20:20.311 [main] DEBUG fita2.visitor - Searching for area: IT
+13:36:08.447 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:36:08.451 [main] DEBUG fita2.visitor - Area ground_floor found
+13:36:08.452 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:36:08.452 [main] DEBUG fita2.visitor - Area floor1 found
+13:36:08.452 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:36:08.452 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:36:08.452 [main] DEBUG fita2.visitor - Searching for area: hall
+13:36:08.452 [main] DEBUG fita2.visitor - Searching for area: room1
+13:36:08.453 [main] DEBUG fita2.visitor - Searching for area: room2
+13:36:08.453 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:36:08.453 [main] DEBUG fita2.visitor - Searching for area: room3
+13:36:08.453 [main] DEBUG fita2.visitor - Searching for area: IT
+13:36:08.453 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:36:08.453 [main] DEBUG fita2.visitor - Area ground_floor found
+13:36:08.454 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:36:08.454 [main] DEBUG fita2.visitor - Area floor1 found
+13:36:08.454 [main] DEBUG fita2.visitor - Searching for area: basement
+13:36:08.454 [main] DEBUG fita2.visitor - Area basement found
+13:36:08.454 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:36:08.454 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:36:08.454 [main] DEBUG fita2.visitor - Searching for area: parking
+13:36:08.455 [main] DEBUG fita2.visitor - Searching for area: hall
+13:36:08.455 [main] DEBUG fita2.visitor - Searching for area: room1
+13:36:08.455 [main] DEBUG fita2.visitor - Searching for area: room2
+13:36:08.455 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:36:08.455 [main] DEBUG fita2.visitor - Searching for area: room3
+13:36:08.455 [main] DEBUG fita2.visitor - Searching for area: IT
+13:36:08.455 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:36:08.456 [main] DEBUG fita2.visitor - Area ground_floor found
+13:36:08.456 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:36:08.456 [main] DEBUG fita2.visitor - Area floor1 found
+13:36:08.456 [main] DEBUG fita2.visitor - Searching for area: basement
+13:36:08.456 [main] DEBUG fita2.visitor - Area basement found
+13:36:08.456 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:36:08.456 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:36:08.456 [main] DEBUG fita2.visitor - Searching for area: parking
+13:36:08.457 [main] DEBUG fita2.visitor - Searching for area: hall
+13:36:08.457 [main] DEBUG fita2.visitor - Searching for area: room1
+13:36:08.457 [main] DEBUG fita2.visitor - Searching for area: room2
+13:36:08.457 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:36:08.457 [main] DEBUG fita2.visitor - Searching for area: room3
+13:36:08.457 [main] DEBUG fita2.visitor - Searching for area: IT
+13:46:10.805 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:46:10.809 [main] DEBUG fita2.visitor - Area ground_floor found
+13:46:10.809 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:46:10.809 [main] DEBUG fita2.visitor - Area floor1 found
+13:46:10.810 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:46:10.810 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:46:10.810 [main] DEBUG fita2.visitor - Searching for area: hall
+13:46:10.810 [main] DEBUG fita2.visitor - Searching for area: room1
+13:46:10.810 [main] DEBUG fita2.visitor - Searching for area: room2
+13:46:10.810 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:46:10.810 [main] DEBUG fita2.visitor - Searching for area: room3
+13:46:10.810 [main] DEBUG fita2.visitor - Searching for area: IT
+13:46:10.811 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:46:10.811 [main] DEBUG fita2.visitor - Area ground_floor found
+13:46:10.811 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:46:10.811 [main] DEBUG fita2.visitor - Area floor1 found
+13:46:10.811 [main] DEBUG fita2.visitor - Searching for area: basement
+13:46:10.811 [main] DEBUG fita2.visitor - Area basement found
+13:46:10.812 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:46:10.812 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:46:10.812 [main] DEBUG fita2.visitor - Searching for area: parking
+13:46:10.812 [main] DEBUG fita2.visitor - Searching for area: hall
+13:46:10.812 [main] DEBUG fita2.visitor - Searching for area: room1
+13:46:10.812 [main] DEBUG fita2.visitor - Searching for area: room2
+13:46:10.812 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:46:10.813 [main] DEBUG fita2.visitor - Searching for area: room3
+13:46:10.813 [main] DEBUG fita2.visitor - Searching for area: IT
+13:46:10.813 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:46:10.813 [main] DEBUG fita2.visitor - Area ground_floor found
+13:46:10.813 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:46:10.814 [main] DEBUG fita2.visitor - Area floor1 found
+13:46:10.814 [main] DEBUG fita2.visitor - Searching for area: basement
+13:46:10.814 [main] DEBUG fita2.visitor - Area basement found
+13:46:10.814 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:46:10.814 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:46:10.814 [main] DEBUG fita2.visitor - Searching for area: parking
+13:46:10.814 [main] DEBUG fita2.visitor - Searching for area: hall
+13:46:10.814 [main] DEBUG fita2.visitor - Searching for area: room1
+13:46:10.815 [main] DEBUG fita2.visitor - Searching for area: room2
+13:46:10.815 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:46:10.815 [main] DEBUG fita2.visitor - Searching for area: room3
+13:46:10.815 [main] DEBUG fita2.visitor - Searching for area: IT
+13:46:22.129 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:46:22.133 [main] DEBUG fita2.visitor - Area ground_floor found
+13:46:22.133 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:46:22.134 [main] DEBUG fita2.visitor - Area floor1 found
+13:46:22.135 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:46:22.135 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:46:22.135 [main] DEBUG fita2.visitor - Searching for area: hall
+13:46:22.135 [main] DEBUG fita2.visitor - Searching for area: room1
+13:46:22.135 [main] DEBUG fita2.visitor - Searching for area: room2
+13:46:22.135 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:46:22.136 [main] DEBUG fita2.visitor - Searching for area: room3
+13:46:22.136 [main] DEBUG fita2.visitor - Searching for area: IT
+13:46:22.136 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:46:22.136 [main] DEBUG fita2.visitor - Area ground_floor found
+13:46:22.137 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:46:22.137 [main] DEBUG fita2.visitor - Area floor1 found
+13:46:22.137 [main] DEBUG fita2.visitor - Searching for area: basement
+13:46:22.137 [main] DEBUG fita2.visitor - Area basement found
+13:46:22.137 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:46:22.137 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:46:22.138 [main] DEBUG fita2.visitor - Searching for area: parking
+13:46:22.138 [main] DEBUG fita2.visitor - Searching for area: hall
+13:46:22.138 [main] DEBUG fita2.visitor - Searching for area: room1
+13:46:22.138 [main] DEBUG fita2.visitor - Searching for area: room2
+13:46:22.138 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:46:22.138 [main] DEBUG fita2.visitor - Searching for area: room3
+13:46:22.138 [main] DEBUG fita2.visitor - Searching for area: IT
+13:46:22.139 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:46:22.139 [main] DEBUG fita2.visitor - Area ground_floor found
+13:46:22.139 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:46:22.139 [main] DEBUG fita2.visitor - Area floor1 found
+13:46:22.139 [main] DEBUG fita2.visitor - Searching for area: basement
+13:46:22.139 [main] DEBUG fita2.visitor - Area basement found
+13:46:22.140 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:46:22.140 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:46:22.140 [main] DEBUG fita2.visitor - Searching for area: parking
+13:46:22.140 [main] DEBUG fita2.visitor - Searching for area: hall
+13:46:22.140 [main] DEBUG fita2.visitor - Searching for area: room1
+13:46:22.141 [main] DEBUG fita2.visitor - Searching for area: room2
+13:46:22.141 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:46:22.141 [main] DEBUG fita2.visitor - Searching for area: room3
+13:46:22.141 [main] DEBUG fita2.visitor - Searching for area: IT
+13:49:33.392 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:49:33.396 [main] DEBUG fita2.visitor - Area ground_floor found
+13:49:33.396 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:49:33.396 [main] DEBUG fita2.visitor - Area floor1 found
+13:49:33.397 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:49:33.397 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:49:33.397 [main] DEBUG fita2.visitor - Searching for area: hall
+13:49:33.397 [main] DEBUG fita2.visitor - Searching for area: room1
+13:49:33.397 [main] DEBUG fita2.visitor - Searching for area: room2
+13:49:33.397 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:49:33.398 [main] DEBUG fita2.visitor - Searching for area: room3
+13:49:33.398 [main] DEBUG fita2.visitor - Searching for area: IT
+13:49:33.398 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:49:33.399 [main] DEBUG fita2.visitor - Area ground_floor found
+13:49:33.399 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:49:33.399 [main] DEBUG fita2.visitor - Area floor1 found
+13:49:33.399 [main] DEBUG fita2.visitor - Searching for area: basement
+13:49:33.399 [main] DEBUG fita2.visitor - Area basement found
+13:49:33.399 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:49:33.399 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:49:33.401 [main] DEBUG fita2.visitor - Searching for area: parking
+13:49:33.401 [main] DEBUG fita2.visitor - Searching for area: hall
+13:49:33.401 [main] DEBUG fita2.visitor - Searching for area: room1
+13:49:33.401 [main] DEBUG fita2.visitor - Searching for area: room2
+13:49:33.401 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:49:33.401 [main] DEBUG fita2.visitor - Searching for area: room3
+13:49:33.402 [main] DEBUG fita2.visitor - Searching for area: IT
+13:49:33.402 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:49:33.402 [main] DEBUG fita2.visitor - Area ground_floor found
+13:49:33.402 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:49:33.402 [main] DEBUG fita2.visitor - Area floor1 found
+13:49:33.403 [main] DEBUG fita2.visitor - Searching for area: basement
+13:49:33.403 [main] DEBUG fita2.visitor - Area basement found
+13:49:33.403 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:49:33.403 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:49:33.403 [main] DEBUG fita2.visitor - Searching for area: parking
+13:49:33.403 [main] DEBUG fita2.visitor - Searching for area: hall
+13:49:33.404 [main] DEBUG fita2.visitor - Searching for area: room1
+13:49:33.404 [main] DEBUG fita2.visitor - Searching for area: room2
+13:49:33.404 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:49:33.404 [main] DEBUG fita2.visitor - Searching for area: room3
+13:49:33.404 [main] DEBUG fita2.visitor - Searching for area: IT
+13:49:43.275 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:49:43.279 [main] DEBUG fita2.visitor - Area ground_floor found
+13:49:43.280 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:49:43.280 [main] DEBUG fita2.visitor - Area floor1 found
+13:49:43.280 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:49:43.280 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:49:43.281 [main] DEBUG fita2.visitor - Searching for area: hall
+13:49:43.281 [main] DEBUG fita2.visitor - Searching for area: room1
+13:49:43.281 [main] DEBUG fita2.visitor - Searching for area: room2
+13:49:43.281 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:49:43.281 [main] DEBUG fita2.visitor - Searching for area: room3
+13:49:43.282 [main] DEBUG fita2.visitor - Searching for area: IT
+13:49:43.282 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:49:43.282 [main] DEBUG fita2.visitor - Area ground_floor found
+13:49:43.282 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:49:43.283 [main] DEBUG fita2.visitor - Area floor1 found
+13:49:43.283 [main] DEBUG fita2.visitor - Searching for area: basement
+13:49:43.283 [main] DEBUG fita2.visitor - Area basement found
+13:49:43.283 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:49:43.283 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:49:43.283 [main] DEBUG fita2.visitor - Searching for area: parking
+13:49:43.284 [main] DEBUG fita2.visitor - Searching for area: hall
+13:49:43.284 [main] DEBUG fita2.visitor - Searching for area: room1
+13:49:43.284 [main] DEBUG fita2.visitor - Searching for area: room2
+13:49:43.284 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:49:43.284 [main] DEBUG fita2.visitor - Searching for area: room3
+13:49:43.284 [main] DEBUG fita2.visitor - Searching for area: IT
+13:49:43.285 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:49:43.285 [main] DEBUG fita2.visitor - Area ground_floor found
+13:49:43.285 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:49:43.285 [main] DEBUG fita2.visitor - Area floor1 found
+13:49:43.285 [main] DEBUG fita2.visitor - Searching for area: basement
+13:49:43.285 [main] DEBUG fita2.visitor - Area basement found
+13:49:43.286 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:49:43.286 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:49:43.287 [main] DEBUG fita2.visitor - Searching for area: parking
+13:49:43.287 [main] DEBUG fita2.visitor - Searching for area: hall
+13:49:43.287 [main] DEBUG fita2.visitor - Searching for area: room1
+13:49:43.288 [main] DEBUG fita2.visitor - Searching for area: room2
+13:49:43.288 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:49:43.288 [main] DEBUG fita2.visitor - Searching for area: room3
+13:49:43.288 [main] DEBUG fita2.visitor - Searching for area: IT
+13:51:05.282 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:51:05.288 [main] DEBUG fita2.visitor - Area ground_floor found
+13:51:05.289 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:51:05.289 [main] DEBUG fita2.visitor - Area floor1 found
+13:51:05.289 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:51:05.289 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:51:05.289 [main] DEBUG fita2.visitor - Searching for area: hall
+13:51:05.289 [main] DEBUG fita2.visitor - Searching for area: room1
+13:51:05.290 [main] DEBUG fita2.visitor - Searching for area: room2
+13:51:05.290 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:51:05.290 [main] DEBUG fita2.visitor - Searching for area: room3
+13:51:05.290 [main] DEBUG fita2.visitor - Searching for area: IT
+13:51:05.291 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:51:05.291 [main] DEBUG fita2.visitor - Area ground_floor found
+13:51:05.291 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:51:05.291 [main] DEBUG fita2.visitor - Area floor1 found
+13:51:05.291 [main] DEBUG fita2.visitor - Searching for area: basement
+13:51:05.291 [main] DEBUG fita2.visitor - Area basement found
+13:51:05.291 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:51:05.292 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:51:05.292 [main] DEBUG fita2.visitor - Searching for area: parking
+13:51:05.292 [main] DEBUG fita2.visitor - Searching for area: hall
+13:51:05.292 [main] DEBUG fita2.visitor - Searching for area: room1
+13:51:05.292 [main] DEBUG fita2.visitor - Searching for area: room2
+13:51:05.292 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:51:05.293 [main] DEBUG fita2.visitor - Searching for area: room3
+13:51:05.293 [main] DEBUG fita2.visitor - Searching for area: IT
+13:51:05.293 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:51:05.293 [main] DEBUG fita2.visitor - Area ground_floor found
+13:51:05.294 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:51:05.294 [main] DEBUG fita2.visitor - Area floor1 found
+13:51:05.294 [main] DEBUG fita2.visitor - Searching for area: basement
+13:51:05.294 [main] DEBUG fita2.visitor - Area basement found
+13:51:05.294 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:51:05.295 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:51:05.295 [main] DEBUG fita2.visitor - Searching for area: parking
+13:51:05.295 [main] DEBUG fita2.visitor - Searching for area: hall
+13:51:05.295 [main] DEBUG fita2.visitor - Searching for area: room1
+13:51:05.296 [main] DEBUG fita2.visitor - Searching for area: room2
+13:51:05.296 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:51:05.296 [main] DEBUG fita2.visitor - Searching for area: room3
+13:51:05.297 [main] DEBUG fita2.visitor - Searching for area: IT
+13:51:14.516 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:51:14.520 [main] DEBUG fita2.visitor - Area ground_floor found
+13:51:14.520 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:51:14.521 [main] DEBUG fita2.visitor - Area floor1 found
+13:51:14.522 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:51:14.522 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:51:14.522 [main] DEBUG fita2.visitor - Searching for area: hall
+13:51:14.522 [main] DEBUG fita2.visitor - Searching for area: room1
+13:51:14.523 [main] DEBUG fita2.visitor - Searching for area: room2
+13:51:14.523 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:51:14.523 [main] DEBUG fita2.visitor - Searching for area: room3
+13:51:14.523 [main] DEBUG fita2.visitor - Searching for area: IT
+13:51:14.523 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:51:14.524 [main] DEBUG fita2.visitor - Area ground_floor found
+13:51:14.524 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:51:14.524 [main] DEBUG fita2.visitor - Area floor1 found
+13:51:14.524 [main] DEBUG fita2.visitor - Searching for area: basement
+13:51:14.524 [main] DEBUG fita2.visitor - Area basement found
+13:51:14.524 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:51:14.525 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:51:14.525 [main] DEBUG fita2.visitor - Searching for area: parking
+13:51:14.525 [main] DEBUG fita2.visitor - Searching for area: hall
+13:51:14.525 [main] DEBUG fita2.visitor - Searching for area: room1
+13:51:14.525 [main] DEBUG fita2.visitor - Searching for area: room2
+13:51:14.525 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:51:14.526 [main] DEBUG fita2.visitor - Searching for area: room3
+13:51:14.526 [main] DEBUG fita2.visitor - Searching for area: IT
+13:51:14.526 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:51:14.526 [main] DEBUG fita2.visitor - Area ground_floor found
+13:51:14.526 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:51:14.527 [main] DEBUG fita2.visitor - Area floor1 found
+13:51:14.527 [main] DEBUG fita2.visitor - Searching for area: basement
+13:51:14.527 [main] DEBUG fita2.visitor - Area basement found
+13:51:14.527 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:51:14.527 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:51:14.527 [main] DEBUG fita2.visitor - Searching for area: parking
+13:51:14.528 [main] DEBUG fita2.visitor - Searching for area: hall
+13:51:14.528 [main] DEBUG fita2.visitor - Searching for area: room1
+13:51:14.528 [main] DEBUG fita2.visitor - Searching for area: room2
+13:51:14.528 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:51:14.529 [main] DEBUG fita2.visitor - Searching for area: room3
+13:51:14.529 [main] DEBUG fita2.visitor - Searching for area: IT
+13:51:25.547 [Thread-2] INFO  fita1.states - Door D2 has been temporarily unlocked for 10 seconds
+13:51:25.562 [Timer-1] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T13:51:25.562303
+13:51:26.210 [Thread-3] WARN  Fita2.locked - Can't unlock shortly door D2 because it's already unlocked shortly
+13:51:26.565 [Timer-1] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T13:51:26.565856900
+13:51:27.571 [Timer-1] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T13:51:27.571487300
+13:51:28.576 [Timer-1] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T13:51:28.576320200
+13:51:29.568 [Timer-1] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T13:51:29.568824700
+13:51:30.574 [Timer-1] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T13:51:30.574978400
+13:54:24.351 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:54:24.356 [main] DEBUG fita2.visitor - Area ground_floor found
+13:54:24.356 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:54:24.356 [main] DEBUG fita2.visitor - Area floor1 found
+13:54:24.356 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:54:24.356 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:54:24.357 [main] DEBUG fita2.visitor - Searching for area: hall
+13:54:24.357 [main] DEBUG fita2.visitor - Searching for area: room1
+13:54:24.357 [main] DEBUG fita2.visitor - Searching for area: room2
+13:54:24.357 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:54:24.358 [main] DEBUG fita2.visitor - Searching for area: room3
+13:54:24.358 [main] DEBUG fita2.visitor - Searching for area: IT
+13:54:24.358 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:54:24.358 [main] DEBUG fita2.visitor - Area ground_floor found
+13:54:24.359 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:54:24.359 [main] DEBUG fita2.visitor - Area floor1 found
+13:54:24.359 [main] DEBUG fita2.visitor - Searching for area: basement
+13:54:24.359 [main] DEBUG fita2.visitor - Area basement found
+13:54:24.360 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:54:24.360 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:54:24.360 [main] DEBUG fita2.visitor - Searching for area: parking
+13:54:24.360 [main] DEBUG fita2.visitor - Searching for area: hall
+13:54:24.360 [main] DEBUG fita2.visitor - Searching for area: room1
+13:54:24.361 [main] DEBUG fita2.visitor - Searching for area: room2
+13:54:24.361 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:54:24.361 [main] DEBUG fita2.visitor - Searching for area: room3
+13:54:24.361 [main] DEBUG fita2.visitor - Searching for area: IT
+13:54:24.361 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+13:54:24.361 [main] DEBUG fita2.visitor - Area ground_floor found
+13:54:24.362 [main] DEBUG fita2.visitor - Searching for area: floor1
+13:54:24.362 [main] DEBUG fita2.visitor - Area floor1 found
+13:54:24.362 [main] DEBUG fita2.visitor - Searching for area: basement
+13:54:24.362 [main] DEBUG fita2.visitor - Area basement found
+13:54:24.362 [main] DEBUG fita2.visitor - Searching for area: stairs
+13:54:24.362 [main] DEBUG fita2.visitor - Searching for area: exterior
+13:54:24.362 [main] DEBUG fita2.visitor - Searching for area: parking
+13:54:24.363 [main] DEBUG fita2.visitor - Searching for area: hall
+13:54:24.363 [main] DEBUG fita2.visitor - Searching for area: room1
+13:54:24.363 [main] DEBUG fita2.visitor - Searching for area: room2
+13:54:24.363 [main] DEBUG fita2.visitor - Searching for area: corridor
+13:54:24.363 [main] DEBUG fita2.visitor - Searching for area: room3
+13:54:24.363 [main] DEBUG fita2.visitor - Searching for area: IT
+14:01:34.315 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:01:34.321 [main] DEBUG fita2.visitor - Area ground_floor found
+14:01:34.321 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:01:34.322 [main] DEBUG fita2.visitor - Area floor1 found
+14:01:34.322 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:01:34.322 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:01:34.322 [main] DEBUG fita2.visitor - Searching for area: hall
+14:01:34.323 [main] DEBUG fita2.visitor - Searching for area: room1
+14:01:34.323 [main] DEBUG fita2.visitor - Searching for area: room2
+14:01:34.323 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:01:34.323 [main] DEBUG fita2.visitor - Searching for area: room3
+14:01:34.324 [main] DEBUG fita2.visitor - Searching for area: IT
+14:01:34.324 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:01:34.324 [main] DEBUG fita2.visitor - Area ground_floor found
+14:01:34.324 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:01:34.325 [main] DEBUG fita2.visitor - Area floor1 found
+14:01:34.325 [main] DEBUG fita2.visitor - Searching for area: basement
+14:01:34.325 [main] DEBUG fita2.visitor - Area basement found
+14:01:34.325 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:01:34.326 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:01:34.326 [main] DEBUG fita2.visitor - Searching for area: parking
+14:01:34.326 [main] DEBUG fita2.visitor - Searching for area: hall
+14:01:34.326 [main] DEBUG fita2.visitor - Searching for area: room1
+14:01:34.327 [main] DEBUG fita2.visitor - Searching for area: room2
+14:01:34.327 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:01:34.327 [main] DEBUG fita2.visitor - Searching for area: room3
+14:01:34.327 [main] DEBUG fita2.visitor - Searching for area: IT
+14:01:34.328 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:01:34.328 [main] DEBUG fita2.visitor - Area ground_floor found
+14:01:34.328 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:01:34.329 [main] DEBUG fita2.visitor - Area floor1 found
+14:01:34.330 [main] DEBUG fita2.visitor - Searching for area: basement
+14:01:34.330 [main] DEBUG fita2.visitor - Area basement found
+14:01:34.330 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:01:34.330 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:01:34.330 [main] DEBUG fita2.visitor - Searching for area: parking
+14:01:34.330 [main] DEBUG fita2.visitor - Searching for area: hall
+14:01:34.330 [main] DEBUG fita2.visitor - Searching for area: room1
+14:01:34.331 [main] DEBUG fita2.visitor - Searching for area: room2
+14:01:34.331 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:01:34.331 [main] DEBUG fita2.visitor - Searching for area: room3
+14:01:34.331 [main] DEBUG fita2.visitor - Searching for area: IT
+14:09:29.216 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:09:29.221 [main] DEBUG fita2.visitor - Area ground_floor found
+14:09:29.222 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:09:29.222 [main] DEBUG fita2.visitor - Area floor1 found
+14:09:29.222 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:09:29.223 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:09:29.223 [main] DEBUG fita2.visitor - Searching for area: hall
+14:09:29.223 [main] DEBUG fita2.visitor - Searching for area: room1
+14:09:29.223 [main] DEBUG fita2.visitor - Searching for area: room2
+14:09:29.224 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:09:29.224 [main] DEBUG fita2.visitor - Searching for area: room3
+14:09:29.224 [main] DEBUG fita2.visitor - Searching for area: IT
+14:09:29.225 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:09:29.225 [main] DEBUG fita2.visitor - Area ground_floor found
+14:09:29.225 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:09:29.225 [main] DEBUG fita2.visitor - Area floor1 found
+14:09:29.226 [main] DEBUG fita2.visitor - Searching for area: basement
+14:09:29.227 [main] DEBUG fita2.visitor - Area basement found
+14:09:29.227 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:09:29.227 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:09:29.227 [main] DEBUG fita2.visitor - Searching for area: parking
+14:09:29.227 [main] DEBUG fita2.visitor - Searching for area: hall
+14:09:29.227 [main] DEBUG fita2.visitor - Searching for area: room1
+14:09:29.227 [main] DEBUG fita2.visitor - Searching for area: room2
+14:09:29.228 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:09:29.228 [main] DEBUG fita2.visitor - Searching for area: room3
+14:09:29.228 [main] DEBUG fita2.visitor - Searching for area: IT
+14:09:29.228 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:09:29.228 [main] DEBUG fita2.visitor - Area ground_floor found
+14:09:29.228 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:09:29.229 [main] DEBUG fita2.visitor - Area floor1 found
+14:09:29.229 [main] DEBUG fita2.visitor - Searching for area: basement
+14:09:29.229 [main] DEBUG fita2.visitor - Area basement found
+14:09:29.229 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:09:29.229 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:09:29.229 [main] DEBUG fita2.visitor - Searching for area: parking
+14:09:29.229 [main] DEBUG fita2.visitor - Searching for area: hall
+14:09:29.229 [main] DEBUG fita2.visitor - Searching for area: room1
+14:09:29.230 [main] DEBUG fita2.visitor - Searching for area: room2
+14:09:29.230 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:09:29.230 [main] DEBUG fita2.visitor - Searching for area: room3
+14:09:29.230 [main] DEBUG fita2.visitor - Searching for area: IT
+14:18:23.705 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:18:23.710 [main] DEBUG fita2.visitor - Area ground_floor found
+14:18:23.711 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:18:23.711 [main] DEBUG fita2.visitor - Area floor1 found
+14:18:23.711 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:18:23.711 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:18:23.711 [main] DEBUG fita2.visitor - Searching for area: hall
+14:18:23.711 [main] DEBUG fita2.visitor - Searching for area: room1
+14:18:23.711 [main] DEBUG fita2.visitor - Searching for area: room2
+14:18:23.712 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:18:23.712 [main] DEBUG fita2.visitor - Searching for area: room3
+14:18:23.712 [main] DEBUG fita2.visitor - Searching for area: IT
+14:18:23.712 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:18:23.712 [main] DEBUG fita2.visitor - Area ground_floor found
+14:18:23.712 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:18:23.713 [main] DEBUG fita2.visitor - Area floor1 found
+14:18:23.713 [main] DEBUG fita2.visitor - Searching for area: basement
+14:18:23.713 [main] DEBUG fita2.visitor - Area basement found
+14:18:23.713 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:18:23.713 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:18:23.714 [main] DEBUG fita2.visitor - Searching for area: parking
+14:18:23.714 [main] DEBUG fita2.visitor - Searching for area: hall
+14:18:23.714 [main] DEBUG fita2.visitor - Searching for area: room1
+14:18:23.714 [main] DEBUG fita2.visitor - Searching for area: room2
+14:18:23.715 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:18:23.715 [main] DEBUG fita2.visitor - Searching for area: room3
+14:18:23.715 [main] DEBUG fita2.visitor - Searching for area: IT
+14:18:23.716 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:18:23.716 [main] DEBUG fita2.visitor - Area ground_floor found
+14:18:23.716 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:18:23.716 [main] DEBUG fita2.visitor - Area floor1 found
+14:18:23.717 [main] DEBUG fita2.visitor - Searching for area: basement
+14:18:23.717 [main] DEBUG fita2.visitor - Area basement found
+14:18:23.717 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:18:23.717 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:18:23.717 [main] DEBUG fita2.visitor - Searching for area: parking
+14:18:23.717 [main] DEBUG fita2.visitor - Searching for area: hall
+14:18:23.717 [main] DEBUG fita2.visitor - Searching for area: room1
+14:18:23.717 [main] DEBUG fita2.visitor - Searching for area: room2
+14:18:23.718 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:18:23.718 [main] DEBUG fita2.visitor - Searching for area: room3
+14:18:23.718 [main] DEBUG fita2.visitor - Searching for area: IT
+14:18:30.895 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:18:30.899 [main] DEBUG fita2.visitor - Area ground_floor found
+14:18:30.899 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:18:30.899 [main] DEBUG fita2.visitor - Area floor1 found
+14:18:30.899 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:18:30.899 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:18:30.899 [main] DEBUG fita2.visitor - Searching for area: hall
+14:18:30.900 [main] DEBUG fita2.visitor - Searching for area: room1
+14:18:30.900 [main] DEBUG fita2.visitor - Searching for area: room2
+14:18:30.900 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:18:30.900 [main] DEBUG fita2.visitor - Searching for area: room3
+14:18:30.900 [main] DEBUG fita2.visitor - Searching for area: IT
+14:18:30.900 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:18:30.901 [main] DEBUG fita2.visitor - Area ground_floor found
+14:18:30.902 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:18:30.902 [main] DEBUG fita2.visitor - Area floor1 found
+14:18:30.902 [main] DEBUG fita2.visitor - Searching for area: basement
+14:18:30.902 [main] DEBUG fita2.visitor - Area basement found
+14:18:30.902 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:18:30.902 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:18:30.902 [main] DEBUG fita2.visitor - Searching for area: parking
+14:18:30.903 [main] DEBUG fita2.visitor - Searching for area: hall
+14:18:30.903 [main] DEBUG fita2.visitor - Searching for area: room1
+14:18:30.903 [main] DEBUG fita2.visitor - Searching for area: room2
+14:18:30.903 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:18:30.903 [main] DEBUG fita2.visitor - Searching for area: room3
+14:18:30.903 [main] DEBUG fita2.visitor - Searching for area: IT
+14:18:30.904 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:18:30.904 [main] DEBUG fita2.visitor - Area ground_floor found
+14:18:30.904 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:18:30.904 [main] DEBUG fita2.visitor - Area floor1 found
+14:18:30.904 [main] DEBUG fita2.visitor - Searching for area: basement
+14:18:30.904 [main] DEBUG fita2.visitor - Area basement found
+14:18:30.904 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:18:30.905 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:18:30.905 [main] DEBUG fita2.visitor - Searching for area: parking
+14:18:30.905 [main] DEBUG fita2.visitor - Searching for area: hall
+14:18:30.905 [main] DEBUG fita2.visitor - Searching for area: room1
+14:18:30.905 [main] DEBUG fita2.visitor - Searching for area: room2
+14:18:30.905 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:18:30.906 [main] DEBUG fita2.visitor - Searching for area: room3
+14:18:30.906 [main] DEBUG fita2.visitor - Searching for area: IT
+14:20:46.084 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:20:46.090 [main] DEBUG fita2.visitor - Area ground_floor found
+14:20:46.090 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:20:46.091 [main] DEBUG fita2.visitor - Area floor1 found
+14:20:46.091 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:20:46.091 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:20:46.091 [main] DEBUG fita2.visitor - Searching for area: hall
+14:20:46.092 [main] DEBUG fita2.visitor - Searching for area: room1
+14:20:46.092 [main] DEBUG fita2.visitor - Searching for area: room2
+14:20:46.092 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:20:46.092 [main] DEBUG fita2.visitor - Searching for area: room3
+14:20:46.092 [main] DEBUG fita2.visitor - Searching for area: IT
+14:20:46.093 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:20:46.093 [main] DEBUG fita2.visitor - Area ground_floor found
+14:20:46.093 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:20:46.093 [main] DEBUG fita2.visitor - Area floor1 found
+14:20:46.093 [main] DEBUG fita2.visitor - Searching for area: basement
+14:20:46.093 [main] DEBUG fita2.visitor - Area basement found
+14:20:46.094 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:20:46.094 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:20:46.094 [main] DEBUG fita2.visitor - Searching for area: parking
+14:20:46.094 [main] DEBUG fita2.visitor - Searching for area: hall
+14:20:46.094 [main] DEBUG fita2.visitor - Searching for area: room1
+14:20:46.094 [main] DEBUG fita2.visitor - Searching for area: room2
+14:20:46.095 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:20:46.095 [main] DEBUG fita2.visitor - Searching for area: room3
+14:20:46.095 [main] DEBUG fita2.visitor - Searching for area: IT
+14:20:46.095 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:20:46.095 [main] DEBUG fita2.visitor - Area ground_floor found
+14:20:46.096 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:20:46.096 [main] DEBUG fita2.visitor - Area floor1 found
+14:20:46.096 [main] DEBUG fita2.visitor - Searching for area: basement
+14:20:46.096 [main] DEBUG fita2.visitor - Area basement found
+14:20:46.096 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:20:46.096 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:20:46.097 [main] DEBUG fita2.visitor - Searching for area: parking
+14:20:46.097 [main] DEBUG fita2.visitor - Searching for area: hall
+14:20:46.097 [main] DEBUG fita2.visitor - Searching for area: room1
+14:20:46.097 [main] DEBUG fita2.visitor - Searching for area: room2
+14:20:46.097 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:20:46.097 [main] DEBUG fita2.visitor - Searching for area: room3
+14:20:46.097 [main] DEBUG fita2.visitor - Searching for area: IT
+14:31:59.241 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:31:59.246 [main] DEBUG fita2.visitor - Area ground_floor found
+14:31:59.247 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:31:59.247 [main] DEBUG fita2.visitor - Area floor1 found
+14:31:59.247 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:31:59.247 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:31:59.247 [main] DEBUG fita2.visitor - Searching for area: hall
+14:31:59.248 [main] DEBUG fita2.visitor - Searching for area: room1
+14:31:59.248 [main] DEBUG fita2.visitor - Searching for area: room2
+14:31:59.248 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:31:59.248 [main] DEBUG fita2.visitor - Searching for area: room3
+14:31:59.248 [main] DEBUG fita2.visitor - Searching for area: IT
+14:31:59.249 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:31:59.249 [main] DEBUG fita2.visitor - Area ground_floor found
+14:31:59.249 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:31:59.249 [main] DEBUG fita2.visitor - Area floor1 found
+14:31:59.249 [main] DEBUG fita2.visitor - Searching for area: basement
+14:31:59.249 [main] DEBUG fita2.visitor - Area basement found
+14:31:59.249 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:31:59.250 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:31:59.250 [main] DEBUG fita2.visitor - Searching for area: parking
+14:31:59.250 [main] DEBUG fita2.visitor - Searching for area: hall
+14:31:59.250 [main] DEBUG fita2.visitor - Searching for area: room1
+14:31:59.250 [main] DEBUG fita2.visitor - Searching for area: room2
+14:31:59.250 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:31:59.250 [main] DEBUG fita2.visitor - Searching for area: room3
+14:31:59.250 [main] DEBUG fita2.visitor - Searching for area: IT
+14:31:59.251 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:31:59.251 [main] DEBUG fita2.visitor - Area ground_floor found
+14:31:59.251 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:31:59.251 [main] DEBUG fita2.visitor - Area floor1 found
+14:31:59.251 [main] DEBUG fita2.visitor - Searching for area: basement
+14:31:59.251 [main] DEBUG fita2.visitor - Area basement found
+14:31:59.252 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:31:59.252 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:31:59.252 [main] DEBUG fita2.visitor - Searching for area: parking
+14:31:59.252 [main] DEBUG fita2.visitor - Searching for area: hall
+14:31:59.252 [main] DEBUG fita2.visitor - Searching for area: room1
+14:31:59.253 [main] DEBUG fita2.visitor - Searching for area: room2
+14:31:59.253 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:31:59.253 [main] DEBUG fita2.visitor - Searching for area: room3
+14:31:59.253 [main] DEBUG fita2.visitor - Searching for area: IT
+14:32:26.972 [Thread-2] INFO  fita1.states - Door D2 has been temporarily unlocked for 10 seconds
+14:32:26.983 [Timer-0] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T14:32:26.983712100
+14:32:27.994 [Timer-0] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T14:32:27.994169900
+14:32:28.986 [Timer-0] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T14:32:28.986447
+14:32:29.983 [Timer-0] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T14:32:29.983963500
+14:32:30.993 [Timer-0] DEBUG Fita2.Clock - tick del reloj en: 2023-11-23T14:32:30.993220400
+14:32:50.017 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:32:50.024 [main] DEBUG fita2.visitor - Area ground_floor found
+14:32:50.024 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:32:50.025 [main] DEBUG fita2.visitor - Area floor1 found
+14:32:50.025 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:32:50.025 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:32:50.025 [main] DEBUG fita2.visitor - Searching for area: hall
+14:32:50.025 [main] DEBUG fita2.visitor - Searching for area: room1
+14:32:50.025 [main] DEBUG fita2.visitor - Searching for area: room2
+14:32:50.026 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:32:50.026 [main] DEBUG fita2.visitor - Searching for area: room3
+14:32:50.026 [main] DEBUG fita2.visitor - Searching for area: IT
+14:32:50.026 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:32:50.026 [main] DEBUG fita2.visitor - Area ground_floor found
+14:32:50.026 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:32:50.027 [main] DEBUG fita2.visitor - Area floor1 found
+14:32:50.027 [main] DEBUG fita2.visitor - Searching for area: basement
+14:32:50.027 [main] DEBUG fita2.visitor - Area basement found
+14:32:50.027 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:32:50.027 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:32:50.027 [main] DEBUG fita2.visitor - Searching for area: parking
+14:32:50.027 [main] DEBUG fita2.visitor - Searching for area: hall
+14:32:50.027 [main] DEBUG fita2.visitor - Searching for area: room1
+14:32:50.028 [main] DEBUG fita2.visitor - Searching for area: room2
+14:32:50.028 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:32:50.028 [main] DEBUG fita2.visitor - Searching for area: room3
+14:32:50.028 [main] DEBUG fita2.visitor - Searching for area: IT
+14:32:50.028 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:32:50.029 [main] DEBUG fita2.visitor - Area ground_floor found
+14:32:50.029 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:32:50.029 [main] DEBUG fita2.visitor - Area floor1 found
+14:32:50.029 [main] DEBUG fita2.visitor - Searching for area: basement
+14:32:50.029 [main] DEBUG fita2.visitor - Area basement found
+14:32:50.029 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:32:50.029 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:32:50.029 [main] DEBUG fita2.visitor - Searching for area: parking
+14:32:50.030 [main] DEBUG fita2.visitor - Searching for area: hall
+14:32:50.030 [main] DEBUG fita2.visitor - Searching for area: room1
+14:32:50.030 [main] DEBUG fita2.visitor - Searching for area: room2
+14:32:50.030 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:32:50.030 [main] DEBUG fita2.visitor - Searching for area: room3
+14:32:50.030 [main] DEBUG fita2.visitor - Searching for area: IT
+14:34:54.411 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:34:54.416 [main] DEBUG fita2.visitor - Area ground_floor found
+14:34:54.417 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:34:54.417 [main] DEBUG fita2.visitor - Area floor1 found
+14:34:54.417 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:34:54.418 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:34:54.418 [main] DEBUG fita2.visitor - Searching for area: hall
+14:34:54.418 [main] DEBUG fita2.visitor - Searching for area: room1
+14:34:54.419 [main] DEBUG fita2.visitor - Searching for area: room2
+14:34:54.419 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:34:54.419 [main] DEBUG fita2.visitor - Searching for area: room3
+14:34:54.419 [main] DEBUG fita2.visitor - Searching for area: IT
+14:34:54.420 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:34:54.420 [main] DEBUG fita2.visitor - Area ground_floor found
+14:34:54.420 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:34:54.420 [main] DEBUG fita2.visitor - Area floor1 found
+14:34:54.421 [main] DEBUG fita2.visitor - Searching for area: basement
+14:34:54.421 [main] DEBUG fita2.visitor - Area basement found
+14:34:54.421 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:34:54.421 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:34:54.421 [main] DEBUG fita2.visitor - Searching for area: parking
+14:34:54.422 [main] DEBUG fita2.visitor - Searching for area: hall
+14:34:54.422 [main] DEBUG fita2.visitor - Searching for area: room1
+14:34:54.422 [main] DEBUG fita2.visitor - Searching for area: room2
+14:34:54.422 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:34:54.423 [main] DEBUG fita2.visitor - Searching for area: room3
+14:34:54.423 [main] DEBUG fita2.visitor - Searching for area: IT
+14:34:54.423 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:34:54.424 [main] DEBUG fita2.visitor - Area ground_floor found
+14:34:54.424 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:34:54.424 [main] DEBUG fita2.visitor - Area floor1 found
+14:34:54.424 [main] DEBUG fita2.visitor - Searching for area: basement
+14:34:54.424 [main] DEBUG fita2.visitor - Area basement found
+14:34:54.425 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:34:54.425 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:34:54.425 [main] DEBUG fita2.visitor - Searching for area: parking
+14:34:54.425 [main] DEBUG fita2.visitor - Searching for area: hall
+14:34:54.425 [main] DEBUG fita2.visitor - Searching for area: room1
+14:34:54.426 [main] DEBUG fita2.visitor - Searching for area: room2
+14:34:54.426 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:34:54.426 [main] DEBUG fita2.visitor - Searching for area: room3
+14:34:54.426 [main] DEBUG fita2.visitor - Searching for area: IT
+14:50:28.037 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:50:28.041 [main] DEBUG fita2.visitor - Area ground_floor found
+14:50:28.042 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:50:28.042 [main] DEBUG fita2.visitor - Area floor1 found
+14:50:28.043 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:50:28.043 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:50:28.043 [main] DEBUG fita2.visitor - Searching for area: hall
+14:50:28.044 [main] DEBUG fita2.visitor - Searching for area: room1
+14:50:28.044 [main] DEBUG fita2.visitor - Searching for area: room2
+14:50:28.044 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:50:28.044 [main] DEBUG fita2.visitor - Searching for area: room3
+14:50:28.045 [main] DEBUG fita2.visitor - Searching for area: IT
+14:50:28.045 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:50:28.045 [main] DEBUG fita2.visitor - Area ground_floor found
+14:50:28.046 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:50:28.046 [main] DEBUG fita2.visitor - Area floor1 found
+14:50:28.046 [main] DEBUG fita2.visitor - Searching for area: basement
+14:50:28.046 [main] DEBUG fita2.visitor - Area basement found
+14:50:28.047 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:50:28.047 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:50:28.047 [main] DEBUG fita2.visitor - Searching for area: parking
+14:50:28.047 [main] DEBUG fita2.visitor - Searching for area: hall
+14:50:28.047 [main] DEBUG fita2.visitor - Searching for area: room1
+14:50:28.048 [main] DEBUG fita2.visitor - Searching for area: room2
+14:50:28.048 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:50:28.048 [main] DEBUG fita2.visitor - Searching for area: room3
+14:50:28.048 [main] DEBUG fita2.visitor - Searching for area: IT
+14:50:28.049 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:50:28.049 [main] DEBUG fita2.visitor - Area ground_floor found
+14:50:28.049 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:50:28.050 [main] DEBUG fita2.visitor - Area floor1 found
+14:50:28.050 [main] DEBUG fita2.visitor - Searching for area: basement
+14:50:28.050 [main] DEBUG fita2.visitor - Area basement found
+14:50:28.050 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:50:28.050 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:50:28.051 [main] DEBUG fita2.visitor - Searching for area: parking
+14:50:28.052 [main] DEBUG fita2.visitor - Searching for area: hall
+14:50:28.052 [main] DEBUG fita2.visitor - Searching for area: room1
+14:50:28.052 [main] DEBUG fita2.visitor - Searching for area: room2
+14:50:28.052 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:50:28.052 [main] DEBUG fita2.visitor - Searching for area: room3
+14:50:28.052 [main] DEBUG fita2.visitor - Searching for area: IT
+14:50:59.346 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:50:59.351 [main] DEBUG fita2.visitor - Area ground_floor found
+14:50:59.351 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:50:59.352 [main] DEBUG fita2.visitor - Area floor1 found
+14:50:59.352 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:50:59.352 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:50:59.352 [main] DEBUG fita2.visitor - Searching for area: hall
+14:50:59.352 [main] DEBUG fita2.visitor - Searching for area: room1
+14:50:59.353 [main] DEBUG fita2.visitor - Searching for area: room2
+14:50:59.354 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:50:59.354 [main] DEBUG fita2.visitor - Searching for area: room3
+14:50:59.354 [main] DEBUG fita2.visitor - Searching for area: IT
+14:50:59.355 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:50:59.355 [main] DEBUG fita2.visitor - Area ground_floor found
+14:50:59.355 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:50:59.355 [main] DEBUG fita2.visitor - Area floor1 found
+14:50:59.356 [main] DEBUG fita2.visitor - Searching for area: basement
+14:50:59.356 [main] DEBUG fita2.visitor - Area basement found
+14:50:59.356 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:50:59.356 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:50:59.356 [main] DEBUG fita2.visitor - Searching for area: parking
+14:50:59.357 [main] DEBUG fita2.visitor - Searching for area: hall
+14:50:59.357 [main] DEBUG fita2.visitor - Searching for area: room1
+14:50:59.357 [main] DEBUG fita2.visitor - Searching for area: room2
+14:50:59.357 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:50:59.357 [main] DEBUG fita2.visitor - Searching for area: room3
+14:50:59.357 [main] DEBUG fita2.visitor - Searching for area: IT
+14:50:59.358 [main] DEBUG fita2.visitor - Searching for area: ground_floor
+14:50:59.358 [main] DEBUG fita2.visitor - Area ground_floor found
+14:50:59.358 [main] DEBUG fita2.visitor - Searching for area: floor1
+14:50:59.358 [main] DEBUG fita2.visitor - Area floor1 found
+14:50:59.358 [main] DEBUG fita2.visitor - Searching for area: basement
+14:50:59.359 [main] DEBUG fita2.visitor - Area basement found
+14:50:59.359 [main] DEBUG fita2.visitor - Searching for area: stairs
+14:50:59.359 [main] DEBUG fita2.visitor - Searching for area: exterior
+14:50:59.359 [main] DEBUG fita2.visitor - Searching for area: parking
+14:50:59.359 [main] DEBUG fita2.visitor - Searching for area: hall
+14:50:59.360 [main] DEBUG fita2.visitor - Searching for area: room1
+14:50:59.360 [main] DEBUG fita2.visitor - Searching for area: room2
+14:50:59.360 [main] DEBUG fita2.visitor - Searching for area: corridor
+14:50:59.360 [main] DEBUG fita2.visitor - Searching for area: room3
+14:50:59.360 [main] DEBUG fita2.visitor - Searching for area: IT

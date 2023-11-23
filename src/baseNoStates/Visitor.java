@@ -1,6 +1,7 @@
-package base.no_states;
+package baseNoStates;
 
-// This class implements Visitor pattern and access the classes Space, Partition, and Door
+// This class implements Visitor pattern and
+// access the classes Space, Partition, and Door
 public interface Visitor {
   void visitSpace(Space space);
   void visitPartition(Partition partition);

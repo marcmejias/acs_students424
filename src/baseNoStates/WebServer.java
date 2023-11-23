@@ -1,9 +1,9 @@
-package base.no_states;
+package baseNoStates;
 
-import base.no_states.requests.Request;
-import base.no_states.requests.RequestArea;
-import base.no_states.requests.RequestReader;
-import base.no_states.requests.RequestRefresh;
+import baseNoStates.requests.Request;
+import baseNoStates.requests.RequestArea;
+import baseNoStates.requests.RequestReader;
+import baseNoStates.requests.RequestRefresh;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,13 +20,14 @@ import java.util.StringTokenizer;
 // http://www.jcgonzalez.com/java-socket-mini-server-http-example
 public class WebServer {
   private static final int PORT = 8080; // port to listen connection
-  private static final DateTimeFormatter formatter =
+  private static final DateTimeFormatter FORMATTER =
           DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
 
   public WebServer() {
     try {
       ServerSocket serverConnect = new ServerSocket(PORT);
-      System.out.println("Server started.\nListening for connections on port : " + PORT + " ...\n");
+      System.out.println("Server started.\nListening for connections on port : "
+          + PORT + " ...\n");
       // we listen until user halts server execution
       while (true) {
         // each client connection will be managed in a dedicated Thread
@@ -43,7 +44,7 @@ public class WebServer {
     // as an inner class, SocketThread sees WebServer attributes
     private final Socket insocked; // client connection via Socket class
 
-    SocketThread(Socket insocket) {
+    SocketThread(final Socket insocket) {
       this.insocked = insocket;
       this.start();
     }
@@ -57,7 +58,8 @@ public class WebServer {
 
       try {
         // we read characters from the client via input stream on the socket
-        in = new BufferedReader(new InputStreamReader(insocked.getInputStream()));
+        in = new BufferedReader(new InputStreamReader(
+            insocked.getInputStream()));
         // we get character output stream to client
         out = new PrintWriter(insocked.getOutputStream());
         // get first line of the request from the client
@@ -67,7 +69,8 @@ public class WebServer {
         System.out.println("sockedthread : " + input);
 
         StringTokenizer parse = new StringTokenizer(input);
-        String method = parse.nextToken().toUpperCase(); // we get the HTTP method of the client
+        String method = parse.nextToken().toUpperCase();
+        // we get the HTTP method of the client
         if (!method.equals("GET")) {
           System.out.println("501 Not Implemented : " + method + " method.");
         } else {
@@ -79,7 +82,8 @@ public class WebServer {
 
           parse = new StringTokenizer(resource, "/[?]=&");
           int i = 0;
-          String[] tokens = new String[20]; // more than the actual number of parameters
+          String[] tokens = new String[20];
+          // more than the actual number of parameters
           while (parse.hasMoreTokens()) {
             tokens[i] = parse.nextToken();
             System.out.println(i + " " + tokens[i]);
@@ -90,10 +94,13 @@ public class WebServer {
           Request request = makeRequest(tokens);
           if (request != null) {
             String typeRequest = tokens[0];
-            System.out.println("created request " + typeRequest + " " + request);
+            System.out.println("created request "
+                + typeRequest + " " + request);
             request.process();
-            System.out.println("processed request " + typeRequest + " " + request);
-            // Make the answer as a JSON string, to be sent to the Javascript client
+            System.out.println("processed request "
+                + typeRequest + " " + request);
+            // Make the answer as a JSON string,
+            // to be sent to the Javascript client
             String answer = makeJsonAnswer(request);
             System.out.println("answer\n" + answer);
             // Here we send the response to the client
@@ -110,8 +117,9 @@ public class WebServer {
       }
     }
 
-    private Request makeRequest(String[] tokens) {
-      // always return request because it contains the answer for the Javascript client
+    private Request makeRequest(final String[] tokens) {
+      // always return request because it contains
+      // the answer for the Javascript client
       System.out.print("tokens : ");
       for (String token : tokens) {
         System.out.print(token + ", ");
@@ -119,8 +127,10 @@ public class WebServer {
       System.out.println();
 
       Request request;
-      // assertions below evaluated to false won't stop the webserver, just print an
-      // assertion error, maybe because the webserver runs in a socked thread
+      // assertions below evaluated to false won't
+      // stop the webserver, just print an
+      // assertion error, maybe because the
+      // webserver runs in a socked thread
       switch (tokens[0]) {
         case "refresh":
           request = new RequestRefresh();
@@ -132,8 +142,10 @@ public class WebServer {
           request = makeRequestArea(tokens);
           break;
         case "get_children":
-          //TODO: this is to be implemented when programming the mobile app in Flutter
-          // in order to navigate the hierarchy of partitions, spaces and doors
+          //TODO this is to be implemented when programming
+          // the mobile app in Flutter
+          // in order to navigate the hierarchy of partitions,
+          // spaces and doors
           assert false : "request get_children is not yet implemented";
           request = null;
           System.exit(-1);
@@ -147,18 +159,18 @@ public class WebServer {
       return request;
     }
 
-    private RequestReader makeRequestReader(String[] tokens) {
+    private RequestReader makeRequestReader(final String[] tokens) {
       String credential = tokens[2];
       String action = tokens[4];
-      LocalDateTime dateTime = LocalDateTime.parse(tokens[6], formatter);
+      LocalDateTime dateTime = LocalDateTime.parse(tokens[6], FORMATTER);
       String doorId = tokens[8];
       return new RequestReader(credential, action, dateTime, doorId);
     }
 
-    private RequestArea makeRequestArea(String[] tokens) {
+    private RequestArea makeRequestArea(final String[] tokens) {
       String credential = tokens[2];
       String action = tokens[4];
-      LocalDateTime dateTime = LocalDateTime.parse(tokens[6], formatter);
+      LocalDateTime dateTime = LocalDateTime.parse(tokens[6], FORMATTER);
       String areaId = tokens[8];
       return new RequestArea(credential, action, dateTime, areaId);
     }
@@ -171,11 +183,12 @@ public class WebServer {
       // SUPERIMPORTANT to avoid the CORS problem :
       // "Cross-Origin Request Blocked: The Same Origin Policy disallows reading
       // the remote resource..."
-      answer += "\r\n"; // blank line between headers and content, very important !
+      answer += "\r\n"; // blank line between headers and content,
+      // very important !
       return answer;
     }
 
-    private String makeJsonAnswer(Request request) {
+    private String makeJsonAnswer(final Request request) {
       String answer = makeHeaderAnswer();
       answer += request.answerToJson().toString();
       return answer;

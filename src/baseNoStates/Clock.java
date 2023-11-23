@@ -1,4 +1,4 @@
-package base.no_states;
+package baseNoStates;
 
 import java.util.Timer;
 import java.time.LocalDateTime;
@@ -12,17 +12,17 @@ public class Clock extends Observable {
     private LocalDateTime date;
     private Timer timer;
     private int period; // seconds
-    private static Clock single_instance = null;
-    private static final Logger logger = LoggerFactory.getLogger("Fita2.Clock");
-    public Clock(int period) {
-        this.period = period;
+    private static Clock singleInstance = null;
+    private static final Logger LOGGER = LoggerFactory.getLogger("Fita2.Clock");
+    public Clock(final int periodLocal) {
+        this.period = periodLocal;
         timer = new Timer();
     }
     public void start() { // This function gets the clock running
         TimerTask repeatedTask = new TimerTask() {
             public void run() { // instance of anonymous class
                 date = LocalDateTime.now();
-                logger.debug("tick del reloj en: {}", date);
+                LOGGER.debug("tick del reloj en: {}", date);
                 setChanged();
                 notifyObservers(date);
             }
@@ -30,11 +30,18 @@ public class Clock extends Observable {
         timer.scheduleAtFixedRate(repeatedTask, 0, 1000 * period);
     }
     public static synchronized Clock getInstance() {
-        if (single_instance == null)
-            single_instance = new Clock(1);
-        return single_instance;
+        if (singleInstance == null) {
+            singleInstance = new Clock(1);
+        }
+        return singleInstance;
     }
-    public void stop() { timer.cancel(); }
-    public int getPeriod() { return period; }
-    public LocalDateTime getDate() { return date; }
+    public void stop() {
+        timer.cancel();
+    }
+    public int getPeriod() {
+        return period;
+    }
+    public LocalDateTime getDate() {
+        return date;
+    }
 }
