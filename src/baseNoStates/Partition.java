@@ -19,6 +19,8 @@ public final class Partition extends Area {
     public ArrayList<Area> getChild() {
         return children;
     }
+    // This function allows the Visitor class
+    // to access Partition
     public void acceptVisitor(final Visitor visitor) {
         visitor.visitPartition(this);
     }

@@ -44,6 +44,48 @@ package requests {
     + process()
     + getAction() : String
     }
+
+    interface Visitor {
+    +visitSpace(space: Space)
+    +visitPartition(partition: Partition)
+    +visitDoor(door : Door)
+    }
+
+    class VisitorFindAreaById{
+    -result: Area
+    -id : String
+    -LOGGER: Logger
+    +VisitorFindAreaById(rootArea: Area, idLocal: String)
+    +getResult(): Area
+    +visitPartition(partition: Partition)
+    +visitSpace(space: Space)
+    +visitDoor(door : Door)
+    }
+
+    class VisitorFindDoorsGivingAccess{
+    -LOGGER: Logger
+    -result: ArrayList<Door>
+    +VisitorFindDoorsGivingAccess(area: Area)
+    +getResult(): Area
+    +visitPartition(partition: Partition)
+    +visitSpace(space: Space)
+    +visitDoor(door : Door)
+    }
+
+    class VisitorGetSpaces{
+    -LOGGER: Logger
+    -result: ArrayList<Space>
+    +VisitorGetSpaces(area: Area)
+    +getResult(): Area
+    +visitPartition(partition: Partition)
+    +visitSpace(space: Space)
+    +visitDoor(door : Door)
+    }
+
+    Visitor <|-- VisitorFindAreaById
+    Visitor <|-- VisitorFindDoorsGivingAccess
+    Visitor <|-- VisitorGetSpaces
+    Request --> Visitor
 }
 
 

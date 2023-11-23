@@ -1,17 +1,11 @@
 package baseNoStates.requests;
 
-import baseNoStates.Door;
-import baseNoStates.Area;
-import baseNoStates.Actions;
-import baseNoStates.VisitorFindAreaById;
-import baseNoStates.VisitorFindDoorsGivingAccess;
+import baseNoStates.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import static baseNoStates.DirectoryAreas.rootArea;
-
 
 public class RequestArea implements Request {
   private final String credential;
@@ -72,7 +66,7 @@ public class RequestArea implements Request {
   // For some it may be authorized and action will be done,
   // for othersit won't be authorized and nothing will happen to them.
   public void process() {
-    VisitorFindAreaById v = new VisitorFindAreaById(rootArea, areaId);
+    VisitorFindAreaById v = new VisitorFindAreaById(DirectoryAreas.getRootArea(), areaId);
     Area area = v.getResult();
     //
     // an Area is a Space or a Partition

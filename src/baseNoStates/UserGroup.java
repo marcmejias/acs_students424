@@ -1,7 +1,6 @@
 package baseNoStates;
 
 import java.util.ArrayList;
-import static baseNoStates.DirectoryAreas.rootArea;
 
 public class UserGroup {
     // A userGroup is an agrupation of users that
@@ -25,7 +24,7 @@ public class UserGroup {
             for (String space : permittedSpacesLocal) {
                 // ...add all those spaces to the permissions
                 VisitorFindAreaById v =
-                    new VisitorFindAreaById(rootArea, space);
+                    new VisitorFindAreaById(DirectoryAreas.getRootArea(), space);
                 Area sp = v.getResult();
                 this.permittedSpaces.add(sp);
             }

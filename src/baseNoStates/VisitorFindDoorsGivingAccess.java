@@ -4,6 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 
+// This class uses the Visitor to get the doors of a given Space
+// without needing to implement the functionality in Space
 public class VisitorFindDoorsGivingAccess implements Visitor {
   private ArrayList<Door> result = new ArrayList<Door>();
   private static final Logger LOGGER =

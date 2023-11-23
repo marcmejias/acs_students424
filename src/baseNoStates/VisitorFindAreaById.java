@@ -3,6 +3,8 @@ package baseNoStates;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+// This class uses the Visitor to get an Area on the tree
+// without needing to implement the functionality in Area
 public class VisitorFindAreaById implements Visitor {
   private String id;
   private Area result;
@@ -16,6 +18,9 @@ public class VisitorFindAreaById implements Visitor {
   public Area getResult() {
     return result;
   }
+  // This function iterates the children of a Partition
+  // regardless if they are Partition or Space
+  // in order to find the Area we want
   @Override
   public void visitPartition(final Partition partition) {
     if (partition.getId().equals(id)) {

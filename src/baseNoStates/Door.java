@@ -101,6 +101,8 @@ public class Door {
     json.put("closed", closed);
     return json;
   }
+  // This function allows the Visitor class
+  // to access Space
   public void acceptVisitor(final Visitor visitor) {
     visitor.visitDoor(this);
   }

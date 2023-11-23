@@ -26,18 +26,22 @@ of Webserver
 end note
 
 class DirectoryAreas {
+-LOGGER: Logger
++DirectoryAreas()
 + {static} rootArea : Area
 - {static} allDoors : Door[]
 + {static} makeAreas()
-+ {static} findAreaById(id : String) : Area
 + {static} findDoorById(id : String) : Door
 + {static} getAllDoors() : Door[]
++ {static} getRootArea() : Partition
 }
 
 DirectoryAreas --> "*" Door : "allDoors"
 DirectoryAreas --> "1" Area : "rootArea"
 
 class DirectoryUsersGroup {
++DirectoryUsersGroup()
+-LOGGER: Logger
 - {static} userGroups : ArrayList<UserGroup>
 + {static} makeUserGroup()
 + {static} findUserByCredential(credential : String) : User
@@ -66,6 +70,7 @@ class Door {
 + getToSpace : Space
 + getStateName() : String
 - doAction(action : String)
++acceptVisitor(visitor: Visitor)
 }
 
 
@@ -83,8 +88,11 @@ abstract DoorState{
 
 DoorState <|-- Unlocked
 DoorState <|-- Locked
+DoorState <|-- UnlockedShortly
+DoorState <|-- Propped
 
 class Unlocked {
+-LOGGER: Logger
 + DoorState(door : Door)
 + open()
 + close()
@@ -94,21 +102,47 @@ class Unlocked {
 }
 
 class Locked {
+-LOGGER: Logger
 + DoorState(door : Door)
 + open()
 + close()
 + lock()
 + unlock()
++ unlockShortly()
 + Locked (door : Door)
 }
+
+class UnlockedShortly {
+-LOGGER: Logger
++ DoorState(door : Door)
++ open()
++ close()
++ lock()
++ unlock()
++ UnlockedShortly (door : Door)
+}
+
+class Propped {
+-LOGGER: Logger
++ DoorState(door : Door)
++ open()
++ close()
++ lock()
++ unlock()
++ Propped (door : Door)
+}
+
 class States{
 {static}+LOCKED : String
 {static}+UNLOCKED : String
+{static}+UNLOCKED_SHORTLY : String
+{static}+PROPPED : String
 }
 
 class Actions{
 {static}+LOCK : String
 {static}+UNLOCK : String
+{static}+UNLOCK_SHORTLY : String
 {static}+OPEN : String
 {static}+CLOSE : String
 }
@@ -126,30 +160,27 @@ class User {
 + canDoAction : boolean
 }
 
-
-
 abstract Area{
 -id :String
 -{static} rootArea : Partition
 +getId()
 +addChild()
-+{abstract}getDoorsGivingAccess() : Door[]
-+{abstract}findAreaById(id : String) : Area
-+{abstract}getSpaces() : Space[]
 + Area (id : String, root : Partition)
-
 }
 
 class Clock{
 -date : LocalDateTime
 -timer : Timer
+-LOGGER: Logger
 -period : int
+-singleInstance: Clock
 +Clock (period : int)
 +start()
 +stop()
 +getPeriod()
 +getDate (date : LocalDateTime)
 +Clock(period : int)
+-getInstance(): Clock
 }
 
 Area --> "*" Partition
@@ -157,17 +188,19 @@ Area --> "*" Space
 class Partition{
 -children : ArrayList<Area>
 +Partition(id : String, root : Area, doors : ArrayList<Door>)
-+findAreaById(id : String) : Area
-+getSpaces() : ArrayList<Space>
++addChild(child: Area)
++getChild(): ArrayList<Area>
++acceptVisitor(visitor: Visitor)
 }
 
 class Space{
 -doors : ArrayList<Door>
 +Space(id : String, root : Area, doors : ArrayList<Door>
-+findAreaById(id : String) : Space
-+getSpaces() : ArrayList<Space>
 +getDoorsGivingAccess() : ArrayList<Door>
++acceptVisitor(visitor: Visitor)
++addDoor(door : Door)
 }
+
 class Schedule{
 -fromDate : LocalDate
 -toDate : LocalDate
@@ -178,8 +211,6 @@ class Schedule{
 timeInterval : ArrayList<String>)
 +isInSchedule(now : LocalDateTime) : boolean
 }
-
-
 
 class UserGroup{
 -name : String
@@ -204,6 +235,48 @@ UserGroup *--> "1" Schedule
 class Main {
 + {static} main(args : String)
 }
+
+interface Visitor {
++visitSpace(space: Space)
++visitPartition(partition: Partition)
++visitDoor(door : Door)
+}
+
+class VisitorFindAreaById{
+-result: Area
+-id : String
+-LOGGER: Logger
++VisitorFindAreaById(rootArea: Area, idLocal: String)
++getResult(): Area
++visitPartition(partition: Partition)
++visitSpace(space: Space)
++visitDoor(door : Door)
+}
+
+class VisitorFindDoorsGivingAccess{
+-LOGGER: Logger
+-result: ArrayList<Door>
++VisitorFindDoorsGivingAccess(area: Area)
++getResult(): Area
++visitPartition(partition: Partition)
++visitSpace(space: Space)
++visitDoor(door : Door)
+}
+
+class VisitorGetSpaces{
+-LOGGER: Logger
+-result: ArrayList<Space>
++VisitorGetSpaces(area: Area)
++getResult(): Area
++visitPartition(partition: Partition)
++visitSpace(space: Space)
++visitDoor(door : Door)
+}
+
+Visitor <|-- VisitorFindAreaById
+Visitor <|-- VisitorFindDoorsGivingAccess
+Visitor <|-- VisitorGetSpaces
+UserGroup --> Visitor
 
 note right of Main::main
 DirectoryDoors.makeDoors()

@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 
+// This class uses the Visitor to get the spaces of a given Partition
+// without needing to implement the functionality in Partition
 public class VisitorGetSpaces implements Visitor {
   private ArrayList<Space> result = new ArrayList<>();
   private static final Logger LOGGER =

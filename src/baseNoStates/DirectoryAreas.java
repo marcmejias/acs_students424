@@ -12,7 +12,7 @@ public final class DirectoryAreas {
     // List of all doors in the building
     private static ArrayList<Door> allDoors;
     // Root of the tree, also known as building
-    public static Partition rootArea;
+    private static Partition rootArea;
     private static final Logger LOGGER = LoggerFactory.getLogger("Fita1");
     // This function creates all Spaces and Partitions
     public static void makeAreas() {
@@ -48,19 +48,6 @@ public final class DirectoryAreas {
         allDoors = new ArrayList<>(Arrays.asList(d1, d2, d3, d4,
             d5, d6, d7, d8, d9));
     }
-    /*
-    public static Area findAreaById(String id){
-    // This function travels the Area tree
-        // to find the Area with the matching id
-        Area area = rootArea.findAreaById(id);
-        //System.out.print("Is area:" + area.getId() +
-        area.getSpaces().toString() +  " ");
-        if (area == null) {
-            logger.warn("Area not valid: ", id);
-            return null;
-        } else
-            return area;
-    }*/
     public static Door findDoorById(final String id) {
         // This function travels the allDoors list
         // to find the door with the matching id
@@ -74,5 +61,8 @@ public final class DirectoryAreas {
     }
     public static ArrayList<Door> getAllDoors() {
         return allDoors;
+    }
+    public static Partition getRootArea() {
+        return rootArea;
     }
 }
