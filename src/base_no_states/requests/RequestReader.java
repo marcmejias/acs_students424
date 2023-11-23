@@ -1,9 +1,9 @@
-package baseNoStates.requests;
+package base_no_states.requests;
 
-import baseNoStates.DirectoryAreas;
-import baseNoStates.DirectoryUserGroups;
-import baseNoStates.Door;
-import baseNoStates.User;
+import base_no_states.DirectoryAreas;
+import base_no_states.DirectoryUserGroups;
+import base_no_states.Door;
+import base_no_states.User;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 

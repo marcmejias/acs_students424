@@ -1,4 +1,4 @@
-package baseNoStates;
+package base_no_states;
 
 public final class States {
     // This class contains declared constants that

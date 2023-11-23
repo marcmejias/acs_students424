@@ -1,4 +1,4 @@
-package baseNoStates;
+package base_no_states;
 
 public abstract class Area {
     // Areas are the non-specified version of Partitions and Spaces,
