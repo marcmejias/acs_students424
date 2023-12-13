@@ -1,2 +1,7 @@
+Milestone 1:
 Marc Mejias Flores - 1606376: Comentaris, creacio dels tests i prints, creacio de Area, Clock, Door, Partition, Space i User
 Oriol Casanova Ramirez - 1531174: UML, algun comentari, creacio de DirectoryUserGroups, DirectoryAreas, UserGroups i DoorState(Locked i Unlocked)
+
+Milestone 2:
+Marc Mejias Flores - 1606376: Ha implementat el refactoring del Visitor, el patró Singleton, l'actualització dels UML, i comentaris adicionals a classes existents i noves.
+Oriol Casanova Ramirez - 1531174: Logging, checkstyle, algun comentari

@@ -59,6 +59,17 @@ public final class DirectoryAreas {
         LOGGER.info("door with id {} not found",  id);
         return null; // otherwise we get a Java error
     }
+    public static Area findAreaById(final String id) {
+        if (id.equals("ROOT")) {
+            // Special id that means that the wanted area is the root.
+            // This is because the Flutter app client doesn't know the
+            // id of the root, differently from the simulator
+            return rootArea;
+        } else {
+            VisitorFindAreaById v = new VisitorFindAreaById(rootArea, id);
+            return v.getResult();
+        }
+    }
     public static ArrayList<Door> getAllDoors() {
         return allDoors;
     }

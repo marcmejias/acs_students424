@@ -1,5 +1,7 @@
 package base.no.states;
 
+import org.json.JSONObject;
+
 public abstract class Area {
     // Areas are the non-specified version of Partitions and Spaces,
     // i.e. their shared values
@@ -19,4 +21,5 @@ public abstract class Area {
     }
     public abstract void acceptVisitor(Visitor visitor);
     // Check Partitions or Space for specific implementation
+    public abstract JSONObject toJson(int depth);
 }

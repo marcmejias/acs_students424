@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Main" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="base_no_states.Main" />
+    <option name="MAIN_CLASS_NAME" value="base.no.states.Main" />
     <module name="acs_students424" />
     <option name="PROGRAM_PARAMETERS" value="-ea" />
     <method v="2">

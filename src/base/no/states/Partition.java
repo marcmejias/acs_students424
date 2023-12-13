@@ -1,5 +1,8 @@
 package base.no.states;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 // A Partition is a group of spaces or partitions,
@@ -23,5 +26,20 @@ public final class Partition extends Area {
     // to access Partition
     public void acceptVisitor(final Visitor visitor) {
         visitor.visitPartition(this);
+    }
+    public JSONObject toJson(int depth) {
+        // for depth=1 only the root and children,
+        // for recusive = all levels use Integer.MAX_VALUE
+        JSONObject json = new JSONObject();
+        json.put("class", "partition");
+        json.put("id", id);
+        JSONArray jsonAreas = new JSONArray();
+        if (depth > 0) {
+            for (Area a : children) {
+                jsonAreas.put(a.toJson(depth - 1));
+            }
+            json.put("areas", jsonAreas);
+        }
+        return json;
     }
 }
